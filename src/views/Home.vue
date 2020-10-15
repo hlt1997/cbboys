@@ -39,18 +39,18 @@ export default {
       tabbar:'index'
     }
   },
-  watch:{
-    tabbar(value){
-      if(value=='index'){
-        this.$router.push('/')
-      }if(value=='me'){
-        this.$router.push('/me')
-      }if(value=='message'){
-        this.$router.push('/message')
-      }if(value=='shopcart'){
-        this.$router.push('/shopcart')
-      }
-    }
-  }
+  // watch:{
+  //   tabbar(value){
+  //     if(value=='index'){
+  //       this.$router.push('/')
+  //     }if(value=='me'){
+  //       this.$router.push('/me')
+  //     }if(value=='message'){
+  //       this.$router.push('/message')
+  //     }if(value=='shopcart'){
+  //       this.$router.push('/shopcart')
+  //     }
+  //   }
+  // }
 }
 </script>

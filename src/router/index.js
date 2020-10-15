@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
-
 import Me from '../views/Me'
 import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
+import Register from '../views/Register'
+import Login from '../views/Login'
 //import Message from '../views/Details'
 
 
@@ -25,7 +25,16 @@ const routes = [
     path: '/me',
     component: Me
   },
- 
+  {
+    //注册
+    path: '/register',
+    component: Register
+  },
+  {
+    //登录
+    path: '/login',
+    component: Login
+  },
   {
     path: '/',
     name: 'Home',
