@@ -3,9 +3,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from 'axios'
+// 导入Mint UI
 import MintUI from "mint-ui"
-import "mint-ui/lib/style.min.css"
+// 导入样式文件
+import 'mint-ui/lib/style.min.css'
 
+// 注册为Vue的插件
 Vue.use(MintUI)
 axios.defaults.baseURL="http://127.0.0.1:3000"
 Vue.prototype.axios=axios;
