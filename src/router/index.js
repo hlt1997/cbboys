@@ -1,37 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Shopping from "../views/shopping"
-<<<<<<< HEAD
-import Me from '../views/me'
-import Shopcart from '../views/shopcart'
+
+
+import Me from '../views/Me'
+import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
-=======
-import Details from '../views/Details'
->>>>>>> 1c0c8bb5255809f741ff3ba1934930ab9efd6ad9
+//import Message from '../views/Details'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-<<<<<<< HEAD
+
     path: '/shopcart',
-    
     component: Shopcart
   },
   {
     path: '/message',
-    
     component: Message
   },
   {
     path: '/me',
-    
     component: Me
-=======
-    path:'details',
-    component:Details
->>>>>>> 1c0c8bb5255809f741ff3ba1934930ab9efd6ad9
   },
   {
     path: '/shopping',

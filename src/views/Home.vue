@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-<<<<<<< HEAD
+
     <mt-tabbar v-model='tabbar' fixed>
       <mt-tab-item id="index">
         首页
@@ -23,10 +23,10 @@
         <img src="../../public/img/me_disabled.png" slot="icon" v-else>
       </mt-tab-item>
     </mt-tabbar>
-=======
+
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
->>>>>>> 1c0c8bb5255809f741ff3ba1934930ab9efd6ad9
+
   </div>
 </template>
 
