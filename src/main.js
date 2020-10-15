@@ -3,12 +3,12 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import axios from 'axios'
-import axios from "mint-ui"
+import MintUI from "mint-ui"
 import "mint-ui/lib/style.min.css"
 
 Vue.use(MintUI)
 axios.defaults.baseURL="http://127.0.0.1:3000"
-Vue.protype.axios=axios;
+Vue.prototype.axios=axios;
 Vue.config.productionTip = false
 
 new Vue({
