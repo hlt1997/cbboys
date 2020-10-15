@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import Site from '../views/Site'
 
 import Me from '../views/Me'
 import Shopcart from '../views/Shopcart'
@@ -13,7 +13,10 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-
+    path: '/site',
+    component: Site
+  },
+  {
     path: '/shopcart',
     component: Shopcart
   },
