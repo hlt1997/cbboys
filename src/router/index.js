@@ -2,10 +2,28 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Shopping from "../views/shopping"
+import Me from '../views/me'
+import Shopcart from '../views/shopcart'
+import Message from '../views/Message'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/shopcart',
+    
+    component: Shopcart
+  },
+  {
+    path: '/message',
+    
+    component: Message
+  },
+  {
+    path: '/me',
+    
+    component: Me
+  },
   {
     path: '/shopping',
     
