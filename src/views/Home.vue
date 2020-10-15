@@ -24,15 +24,13 @@
       </mt-tab-item>
     </mt-tabbar>
 
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   
 
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
   data(){
@@ -42,17 +40,17 @@ export default {
     }
   },
   watch:{
-    // tabbar(value){
-    //   if(value=='index'){
-    //     this.$router.push('/')
-    //   }if(value=='me'){
-    //     this.$router.push('/me')
-    //   }if(value=='message'){
-    //     this.$router.push('/message')
-    //   }if(value=='shopcart'){
-    //     this.$router.push('/shopcart')
-    //   }
-    // }
+    tabbar(value){
+      if(value=='index'){
+        this.$router.push('/')
+      }if(value=='me'){
+        this.$router.push('/me')
+      }if(value=='message'){
+        this.$router.push('/message')
+      }if(value=='shopcart'){
+        this.$router.push('/shopcart')
+      }
+    }
   }
 }
 </script>

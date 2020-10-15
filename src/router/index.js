@@ -25,11 +25,7 @@ const routes = [
     path: '/me',
     component: Me
   },
-  {
-    path: '/shopping',
-    
-    component: Shopping
-  },
+ 
   {
     path: '/',
     name: 'Home',
