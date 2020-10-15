@@ -2,10 +2,15 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Shopping from "../views/shopping"
+import Details from '../views/Details'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path:'details',
+    component:Details
+  },
   {
     path: '/shopping',
     
