@@ -6,17 +6,25 @@ import Site from '../views/Site'
 import Me from '../views/Me'
 import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
-//import Message from '../views/Details'
+import Details from '../views/Details'
 
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+<<<<<<< HEAD
     path: '/site',
     component: Site
   },
   {
+=======
+    path:'/details',
+    component:Details
+  },
+  {
+
+>>>>>>> 8193f0e7f5c9ed06426357402dd2877700d1f694
     path: '/shopcart',
     component: Shopcart
   },
