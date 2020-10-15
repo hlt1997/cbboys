@@ -6,12 +6,16 @@ import Home from '../views/Home.vue'
 import Me from '../views/Me'
 import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
-//import Message from '../views/Details'
+import Details from '../views/Details'
 
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path:'/details',
+    component:Details
+  },
   {
 
     path: '/shopcart',
