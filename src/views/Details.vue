@@ -32,6 +32,7 @@
     <div class="money">
       <div class="price">55</div>
       <span class="cotton">棉被</span>
+      <div class="recommend">10斤被子东信棉</div>
     </div>
   </div>
 </template>
@@ -43,19 +44,23 @@
   .details .img-header{
     margin: 0 10px;
   }
+  /* 顶部导航栏图片 */
   .details .sideshow{
     width: 100%;
     height: 300px;
   }
+  /*第二栏 价格，详情介绍 总布局*/
   .details .money{
     margin: 10px 10px;
     background: #fff;
     border-radius: 5px;
   }
+  /* 第二栏价格 */
   .details .price{
     
     padding: 10px;
   }
+  /* 第二栏cb字体 */
   .details .cotton{
     padding: 5px 10px;
     border-radius: 10px;
@@ -64,5 +69,10 @@
     display: inline-block;
     margin-left:10px ;
     color: #FFF;
+  }
+  /* 第二栏详情介绍 */
+  .details .recommend{
+    font-weight: bold;
+    font-family: "Microsoft Yahei";
   }
 </style>
