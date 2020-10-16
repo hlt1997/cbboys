@@ -21,7 +21,6 @@
     
     <!--轮播图结束-->
 
-<<<<<<< HEAD
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -47,7 +46,6 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-=======
     <mt-tabbar v-model='tabbar' fixed>
       <mt-tab-item id="index">
         首页
@@ -70,13 +68,13 @@
         <img src="../../public/img/me_disabled.png" slot="icon" v-else>
       </mt-tab-item>
     </mt-tabbar>
-
-   
-
->>>>>>> e50a1a768bec0b7f42f5a7658826e7c7f5b1b587
   </div>
 </template>
 <style scoped>
+  .search{
+    margin-top: 10px;
+    margin: 0 auto;
+  }
   .search input{
     border: 1px solid red;
     border-radius: 3px 0 0 3px;
