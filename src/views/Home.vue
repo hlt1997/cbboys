@@ -20,80 +20,36 @@
     </div>
     
     <!--轮播图结束-->
-
-<<<<<<< HEAD
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
         <mt-tab-item id="index">
           首页
-          <img src="../../public/img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-          <img src="../../public/img/index_disabled.png" slot="icon" v-else>
+          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
+          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
         </mt-tab-item>
         <mt-tab-item id="shopcart">
           购物车
-          <img src="../../public/img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
-          <img src="../../public/img/cart_disabled.png" slot="icon" v-else>
+          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
+          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
         </mt-tab-item>
         <mt-tab-item id="message">
           信息
-          <img src="../../public/img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-          <img src="../../public/img/xiaoxi_disabled.png" slot="icon" v-else>
+          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
+          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
         </mt-tab-item>
         <mt-tab-item id="me">
           我的
-          <img src="../../public/img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-          <img src="../../public/img/me_disabled.png" slot="icon" v-else>
+          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
+          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
         </mt-tab-item>
       </mt-tabbar>
     </div>
-=======
-    <mt-tabbar v-model='tabbar' fixed>
-      <mt-tab-item id="index">
-        首页
-<<<<<<< HEAD
-        <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-        <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="shopcart">
-        购物车
-        <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
-        <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="message">
-        信息
-        <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-        <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="me">
-        我的
-        <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-        <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-=======
-        <img src="../../public/img/index_enabled.png" slot="icon" v-if="tabbar!='index'">
-        <img src="../../public/img/index_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="shopcart">
-        购物车
-        <img src="../../public/img/cart_enabled.png" slot="icon" v-if="tabbar!='shopcart'">
-        <img src="../../public/img/cart_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="message">
-        信息
-        <img src="../../public/img/xiaoxi_enabled.png" slot="icon" v-if="tabbar!='message'">
-        <img src="../../public/img/xiaoxi_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="me">
-        我的
-        <img src="../../public/img/me_enabled.png" slot="icon" v-if="tabbar!='me'">
-        <img src="../../public/img/me_disabled.png" slot="icon" v-else>
->>>>>>> 8193f0e7f5c9ed06426357402dd2877700d1f694
-      </mt-tab-item>
-    </mt-tabbar>
+    
 
    
 
->>>>>>> e50a1a768bec0b7f42f5a7658826e7c7f5b1b587
+
   </div>
 </template>
 <style scoped>
@@ -127,7 +83,7 @@ export default {
       value:''
     }
   },
-<<<<<<< HEAD
+
   // watch:{
   //   tabbar(value){
   //     if(value=='index'){
@@ -141,7 +97,7 @@ export default {
   //     }
   //   }
   // }
-=======
+
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -159,6 +115,6 @@ export default {
       }
     }
   }
->>>>>>> 6fe4403d37bc875236b224ecd6a76d8543709dd8
+
 }
 </script>
