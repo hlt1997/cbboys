@@ -48,36 +48,8 @@
       </mt-tabbar>
     </div>
 
-    <mt-tabbar v-model='tabbar' fixed>
-      <mt-tab-item id="index">
-        首页
-<<<<<<< HEAD
-        <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar!='index'">
-        <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-=======
-<<<<<<< HEAD
-        <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-        <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="shopcart">
-        购物车
-        <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
-        <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="message">
-        信息
-        <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-        <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="me">
-        我的
-        <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-        <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-=======
-        <img src="../../public/img/index_enabled.png" slot="icon" v-if="tabbar!='index'">
-        <img src="../../public/img/index_disabled.png" slot="icon" v-else>
->>>>>>> aed4204a210ff08b7c0309a1f019e5596ab06048
-      </mt-tab-item>
+    <!-- <mt-tabbar v-model='tabbar' fixed>
+      
       <mt-tab-item id="shopcart">
         购物车
         <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar!='shopcart'">
@@ -90,16 +62,12 @@
       </mt-tab-item>
       <mt-tab-item id="me">
         我的
-<<<<<<< HEAD
         <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar!='me'">
         <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-=======
         <img src="../../public/img/me_enabled.png" slot="icon" v-if="tabbar!='me'">
         <img src="../../public/img/me_disabled.png" slot="icon" v-else>
->>>>>>> 8193f0e7f5c9ed06426357402dd2877700d1f694
->>>>>>> aed4204a210ff08b7c0309a1f019e5596ab06048
       </mt-tab-item>
-    </mt-tabbar>
+    </mt-tabbar> -->
 
    
 
@@ -136,7 +104,6 @@ export default {
       value:''
     }
   },
-<<<<<<< HEAD
   // watch:{
   //   tabbar(value){
   //     if(value=='index'){
@@ -150,7 +117,6 @@ export default {
   //     }
   //   }
   // }
-=======
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -168,6 +134,5 @@ export default {
       }
     }
   }
->>>>>>> 6fe4403d37bc875236b224ecd6a76d8543709dd8
 }
 </script>
