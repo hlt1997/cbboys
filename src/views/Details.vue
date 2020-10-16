@@ -104,6 +104,40 @@
         </tr>
       </table>
     </div>
+    <div class="four">
+      <div class="four-son">
+        <div>
+          <div>
+            <span class="four-baby">宝贝评价()</span>
+            <span class="four-all">查看全部 > </span>
+          </div>
+          <div>
+            <button class="four-button">性价比高()</button>
+            <button class="four-button">质量好()</button>
+            <button class="four-button">很舒适()</button>
+            <div>
+              <img src="../../public/img/details-image/头像 男孩.png" alt="">
+              <span>用户名</span>
+              <div class="four-product">暗室逢灯卡时间划分空间按时付款就好撒空间发件爱神的箭返回尽快发货</div>
+              <div class="four-img-fu">
+                <img src="../../public/img/detail/detail_img1.jpg" class="four-img">
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div>
+          <div>
+            <span class="four-baby">问大家()</span>
+            <span class="four-all">查看全部 ></span>
+          </div>
+          <div class="four-last-fu">
+            <span class="four-last">问</span>
+            <span>着安徽科技护肤的撒娇和飞机撒副科级</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <style  scoped>
@@ -197,5 +231,66 @@
     position: absolute;
     right: 60px;
     color:#f00;
+  }
+  /* 第四栏导航全体布局 */
+  .details .four{
+    margin: 15px 10px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  /* 第四栏宝贝评价样式 */
+  .details .four-baby{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  /* 第四栏查看全部样式 */
+  .details .four-all{
+    position: absolute;
+    right: 30px;
+    color: #f00;
+  } 
+  /* 第四栏子元素布局 */
+  .details .four-son{
+    padding: 10px;
+  }
+  /* 第四栏按钮样式 */
+  .details .four-button{
+    border: none;
+    background: pink;
+    padding: 5px 8px;
+    border-radius:15px;
+    margin:10px  40px 10px 0;
+  }
+  /* 第四栏图片 */
+  .details .four-img{
+    width: 70px;
+    margin-right: 5px;
+  }
+  /* 第四栏图片第一个孩子的样式 */
+  .details .four-img-fu :first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  /* 第四栏图片最后一个孩子的样式 */
+  .details .four-img-fu :last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  /* 第四栏用户介绍详情 */
+  .details .four-product{
+    margin: 10px 0;
+  }
+  /* 第四栏问的标签样式 */
+  .details .four-last{
+    background: #f00;
+    color: #fff;
+    padding: 2px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .details .four-last-fu{
+    margin: 10px 0;
   }
 </style>
