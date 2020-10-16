@@ -6,7 +6,10 @@ import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
+<<<<<<< HEAD
+=======
 //import Message from '../views/Details'
+>>>>>>> 85547f275bd6fb3c02874d6dd169f4384a58a90a
 import Site from '../views/Site'
 import Details from '../views/Details'
 
@@ -23,7 +26,10 @@ const routes = [
     component:Details
   },
   {
+<<<<<<< HEAD
+=======
 
+>>>>>>> 85547f275bd6fb3c02874d6dd169f4384a58a90a
     path: '/shopcart',
     component: Shopcart
   },

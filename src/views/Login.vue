@@ -1,17 +1,19 @@
 <template>
-  <div>
+<div>
     <!-- 顶部开始 -->
     <header>
         <mt-header title="请登录您的账号" class="header">
-            <!-- <router-link >
-                <mt-button  icon="back"></mt-button>
-            </router-link> -->
+            <router-link slot="left" to="/">
+            <mt-button  icon="back"></mt-button>
+             </router-link>
         </mt-header>
     </header>
      <!-- 顶部结束 -->
      <!--表单区域-->
-
-  <div>
+  <div class="margin">
+    <img src="../../public/img/index/index_01.jpg" alt="">
+  </div>
+  <div class="margin">
     <mt-field 
         type="text" 
         label="用户名" 
@@ -30,15 +32,28 @@
         :state="upwdStatus"
         @blur.native.capture="handle2">
     </mt-field>
-    <mt-button @click="handle" class="login-button">用户登录</mt-button>
+    <mt-button @click="handle" class="login-button margin">用户登录</mt-button>
+    <router-link to="/register"><mt-button  class="Register-button margin"> 立即注册</mt-button></router-link>
+
   </div>
 </div>
 </template>
 <style scoped>
+    .margin{
+      margin-top: 17px;
+    }
     .header{
         background-color:#FFF;
         font:italic 20px "simhei";
         color: #000;
+    }
+    .Register-button{
+        width: 240px;
+        height: 40px;
+        background-color: rgb(7,193,96);
+        font:16px "Microsoft yahei";
+        color: #FFF;
+        border-radius: 20px;
     }
     .login-button{
         width: 240px;

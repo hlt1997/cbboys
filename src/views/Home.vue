@@ -97,8 +97,12 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
+<<<<<<< HEAD
   </div>
   <!--底部导航结束-->
+=======
+ </div>
+>>>>>>> refs/remotes/origin/master
 </template>
 <style scoped>
   .search img{
@@ -191,6 +195,7 @@ export default {
       timer:'',
     }
   },
+<<<<<<< HEAD
   mounted(){
     setInterval(()=>{
       // 获取当前时间毫秒数
@@ -217,6 +222,21 @@ export default {
     
     
   },
+=======
+  // watch:{
+  //   tabbar(value){
+  //     if(value=='index'){
+  //       this.$router.push('/')
+  //     }if(value=='me'){
+  //       this.$router.push('/me')
+  //     }if(value=='message'){
+  //       this.$router.push('/message')
+  //     }if(value=='shopcart'){
+  //       this.$router.push('/shopcart')
+  //     }
+  //   }
+  // }
+>>>>>>> refs/remotes/origin/master
   watch:{
     tabbar(value){
       // 跳转到主页
