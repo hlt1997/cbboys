@@ -47,31 +47,7 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-
-    <!-- <mt-tabbar v-model='tabbar' fixed>
-      
-      <mt-tab-item id="shopcart">
-        购物车
-        <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar!='shopcart'">
-        <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="message">
-        信息
-        <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar!='message'">
-        <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-      <mt-tab-item id="me">
-        我的
-        <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar!='me'">
-        <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-        <img src="../../public/img/me_enabled.png" slot="icon" v-if="tabbar!='me'">
-        <img src="../../public/img/me_disabled.png" slot="icon" v-else>
-      </mt-tab-item>
-    </mt-tabbar> -->
-
-   
-
-  </div>
+ </div>
 </template>
 <style scoped>
   .search input{
