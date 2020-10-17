@@ -32,7 +32,9 @@
     <!--中部品牌栏结束-->
     <!--双十一活动栏开始-->
     <div class="activity">
-      <p>双十一活动开始倒计时:{{timer}}欢迎抢购！</p>
+      <p>双十一活动开始倒计时:</p>
+      <p>{{timer}}</p>
+      <p>欢迎抢购，提前预约有优惠哦！</p>
     </div>
     <!--双十一活动栏结束-->
     <!--商品展示区开始-->
@@ -71,32 +73,11 @@
       </div>
     </div>
     <!--商品展示区结束-->
-
-    <!--底部导航开始-->
-    <div>
-      <mt-tabbar v-model='tabbar' fixed>
-        <mt-tab-item id="index">
-          首页
-          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="shopcart">
-          购物车
-          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
-          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="message">
-          信息
-          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="me">
-          我的
-          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-      </mt-tabbar>
+    <!--商品列表结束提示-->
+    <div class="hint">
+      <p>一滴都没有了~~</p>
     </div>
+    <my-footer></my-footer>
   </div>
   <!--底部导航结束-->
 </template>
@@ -166,7 +147,7 @@
 /* 品牌容器下的图片*/
 
   .brand img{
-    width: 160px;
+    width: 170px;
     margin-top:10px;
   }
   .brand img:nth-child(odd){
@@ -177,42 +158,65 @@
   .activity{
     margin-top: 10px;
     text-align: center;
+    /* width: 300px; */
   }
   .activity p{
+    width: 340px;
     background: red;
     color: #fff;
-    font-size: 20px;
-    
+    font-size: 16px;
+    margin: 0 auto;
     padding: 5px ;
+    font-family: '微软雅黑 light';
   }
-/* 商品列表*/
-
-  .commodity div{
-    text-align: center;
-    position: relative;
+  /* 商品列表容器*/
+  /* 为商品列表添加弹性布局，换行显示*/
+  .commodity {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     color: red;
   }
+  /* 每个商品容器*/
+
+  /* 每个偶数商品加左外边距*/
+  .commodity div:nth-child(even){
+    margin-left: 10px;
+  }
+  /* 商品图片*/
   .commodity img{
+    margin-bottom: 10px;
     margin-top: 10px;
+    width: 170px;
   }
-  .commodity p{
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    /* z-index: 100; */
+  /* 商品描述*/
+
+  /*提示信息 */
+  .hint p{
+    margin-top: 10px;
+    padding:10px 0 10px 10px;
+    border-top: 1px dashed #aaa;
+    font-family: '微软雅黑';
+    margin-bottom: 60px;
   }
+  
 </style>
 <script>
+  import MyFooter from "../components/MyFooter";
 
 export default {
+  components:{
+    MyFooter
+  },
   data(){
     return{
-      tabbar:'index',
+      // 顶部搜索框变量
       value:'',
+      // 倒计时变量
       timer:'',
     }
   },
-  mounted(){
+  beforeCreate(){
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -235,8 +239,6 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000)
-    
-    
   },
   watch:{
     tabbar(value){
