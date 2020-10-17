@@ -72,6 +72,10 @@
     </div>
     <!--商品展示区结束-->
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -97,6 +101,14 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
+<<<<<<< HEAD
+=======
+
+
+   
+
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   </div>
   <!--底部导航结束-->
 
@@ -194,6 +206,10 @@ export default {
       timer:'',
     }
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   mounted(){
     setInterval(()=>{
       // 获取当前时间毫秒数
@@ -220,6 +236,23 @@ export default {
     
     
   },
+<<<<<<< HEAD
+=======
+  // watch:{
+  //   tabbar(value){
+  //     if(value=='index'){
+  //       this.$router.push('/')
+  //     }if(value=='me'){
+  //       this.$router.push('/me')
+  //     }if(value=='message'){
+  //       this.$router.push('/message')
+  //     }if(value=='shopcart'){
+  //       this.$router.push('/shopcart')
+  //     }
+  //   }
+  // }
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   watch:{
     tabbar(value){
       // 跳转到主页
