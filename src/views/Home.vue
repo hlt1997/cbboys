@@ -22,8 +22,6 @@
       </mt-swipe>
     </div>
     <!--轮播图结束-->
-<<<<<<< HEAD
-=======
     <!--中部品牌栏开始-->
     <div class="brand">
       <img src="../../public/img/bottom-img/nanjiren.jpg" alt="">
@@ -74,7 +72,6 @@
     </div>
     <!--商品展示区结束-->
 
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -100,18 +97,11 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
+
 
    
 
 
-=======
-<<<<<<< HEAD
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
   </div>
   <!--底部导航结束-->
 
@@ -209,44 +199,7 @@ export default {
       timer:'',
     }
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
-  mounted(){
-    setInterval(()=>{
-      // 获取当前时间毫秒数
-      let now = new Date().getTime();
-      // 获取双十一的毫秒数
-      let end = new Date('2020/11/11 00:00:00').getTime();
-      // 差值换算成秒，向下取整
-      let mil = parseInt((end-now) / 1000);
-      // 计算相差的天数
-      let day = parseInt(mil/(24*60*60));
-      // 总的秒数和每天的秒数取余，结果就是去除天数后的部分的毫秒数
-      let hour = mil % (24*60*60);
-      // 换算成小时=去除天数后的秒数/每小时的秒数
-      hour = parseInt(hour/(60*60))
-      // 总的秒数和每小时的秒数取余，结果就是去除小时后的秒数
-      let min = mil % (60*60);
-      // 换算成分钟=去除小时后的秒数/每分钟的秒数
-      min = parseInt(min/60);
-      // 计算相差的秒数，总的秒数和每分钟的秒数取余
-      // 余数就是剩余秒数
-      let second = mil % 60;
-      this.timer = `${day}天${hour}时${min}分钟${second}秒`;
-    },1000)
-    
-    
-  },
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
   // watch:{
   //   tabbar(value){
   //     if(value=='index'){
@@ -260,14 +213,8 @@ export default {
   //     }
   //   }
   // }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
+
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -285,9 +232,6 @@ export default {
       }
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
 }
 </script>
