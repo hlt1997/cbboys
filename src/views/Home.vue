@@ -97,19 +97,18 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-<<<<<<< HEAD
   </div>
   <!--底部导航结束-->
-=======
- </div>
->>>>>>> refs/remotes/origin/master
 </template>
 <style scoped>
+/* 顶部搜索框下的图片*/
   .search img{
     width: 35px;
     float: right;
     margin-right: 10px;
   }
+/* 顶部搜索框左侧文字*/
+
   .search p{
     float: left;
     background: red;
@@ -121,16 +120,22 @@
     font-size: 16px;
     font-family: "华文行楷";
   }
+/* 顶部搜索栏容器*/
+
   .search{
     margin-top: 10px;
     text-align: center;
   }
+/* 顶部搜索框*/
+
   .search input{
     border: 1px solid red;
     border-radius: 15px 0 0 15px;
     height: 30px;
     font-size: 14px;
   }
+/* 顶部搜索按钮*/
+
   .search button{
     height: 34px;
     border-radius: 0 15px 15px 0;
@@ -142,16 +147,24 @@
     font-size: 14px;
     padding: 0 8px;
   }
+/* 轮播图容器*/
+
   .swipe{
     margin-top: 20px;
     height: 150px;
   }
+/* 轮播图下的图片*/
+
   .swipe img{
     width: 100%;
   }
+/* 品牌容器*/
+
   .brand{
     text-align: center;
   }
+/* 品牌容器下的图片*/
+
   .brand img{
     width: 160px;
     margin-top:10px;
@@ -159,6 +172,8 @@
   .brand img:nth-child(odd){
     margin-right: 10px;
   }
+/* 倒计时容器*/
+  
   .activity{
     margin-top: 10px;
     text-align: center;
@@ -167,9 +182,11 @@
     background: red;
     color: #fff;
     font-size: 20px;
-    /* font-family: "华文行楷"; */
+    
     padding: 5px ;
   }
+/* 商品列表*/
+
   .commodity div{
     text-align: center;
     position: relative;
@@ -195,7 +212,6 @@ export default {
       timer:'',
     }
   },
-<<<<<<< HEAD
   mounted(){
     setInterval(()=>{
       // 获取当前时间毫秒数
@@ -222,21 +238,6 @@ export default {
     
     
   },
-=======
-  // watch:{
-  //   tabbar(value){
-  //     if(value=='index'){
-  //       this.$router.push('/')
-  //     }if(value=='me'){
-  //       this.$router.push('/me')
-  //     }if(value=='message'){
-  //       this.$router.push('/message')
-  //     }if(value=='shopcart'){
-  //       this.$router.push('/shopcart')
-  //     }
-  //   }
-  // }
->>>>>>> refs/remotes/origin/master
   watch:{
     tabbar(value){
       // 跳转到主页
