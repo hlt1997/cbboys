@@ -1,29 +1,65 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+<<<<<<< HEAD
+
+=======
+>>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
 import Me from '../views/Me'
 import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+import Site from '../views/Site'
+import Details from '../views/Details'
+
+
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> refs/remotes/origin/master
 //import Message from '../views/Details'
 import Site from '../views/Site'
 import Details from '../views/Details'
+>>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
 
 
 Vue.use(VueRouter)
 
 const routes = [
+ 
   {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
     path: '/site',
     component: Site
   },
   {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
     path:'/details',
     component:Details
   },
   {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 85547f275bd6fb3c02874d6dd169f4384a58a90a
+>>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
+>>>>>>> refs/remotes/origin/master
     path: '/shopcart',
     component: Shopcart
   },
