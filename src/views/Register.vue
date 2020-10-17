@@ -3,14 +3,12 @@
     <!--顶部开始-->
     <mt-header title="账号注册" class="header"></mt-header>
     <!--顶部结束-->
-    <!--表单区域开始-->
     <div>
-      <div class="margin">
-        <img src="../../public/img/index/index_01.jpg" alt="">
-      </div>
+      <img src="../../public/img/index/index_01.jpg" alt="">
+      <!-- 账户信息开始 -->
       <mt-field 
         type="text"
-        label="用户名"
+        label="用户名："
         placeholder="请输入用户名"
         :attr="{maxlength:20}"
         v-model="username" 
@@ -19,7 +17,7 @@
       </mt-field>
       <mt-field 
         type="password"
-        label="密码"
+        label="密码："
         placeholder="请输入密码"
         :attr="{maxlength:20,autocomplete:'off'}"
         v-model="password"
@@ -28,44 +26,53 @@
       </mt-field>
       <mt-field 
         type="password"
-        label="确认密码"
+        label="确认密码："
         placeholder="请再次输入密码"
         :attr="{maxlength:20,autocomplete:'off'}"
         v-model="conpassword"
         :state="conpwdStatus"
         @blur.native.capture="handle3"> 
       </mt-field>
-      <mt-button @click="handle" class="register-button">免费注册</mt-button>
-      <router-link to="/login"><mt-button  class="login-button margin"> 已有账号,返回登录</mt-button></router-link>
-    </div>
-    <!--表单区域结束-->
+      <!-- 账户信息结束 -->
+      <!-- 登录注册按钮开始 -->
+      <div  class="L_button">
+       <mt-button @click="handle" class="register-button">免费注册</mt-button>
+       <router-link to="/login"><mt-button  class="login-button"> 已有账号,返回登录</mt-button></router-link>
+      </div>
+      <!-- 登录注册按钮结束 -->
+    </div>    
   </div>
 </template>
 <style scoped>
-  .shortcut{
-    text-decoration: none;
-  }
+  /* 顶部文字样式 */
   .header{
         background-color:#FFF;
         font:italic 20px "simhei";
         color: #000;
   }
-  .login-button{
-        width: 240px;
-        height: 40px;
+  /* 注册登录按钮样式 */
+    .register-button,.login-button{
+      display:block;
+      margin:17px auto;
+      width: 240px;
+      height: 40px;
+      font:16px "Microsoft yahei";
+      color: #FFF;
+      border-radius: 20px;
+      background-color: rgba(0, 183, 255, 0.815);
+    }
+    .login-button{
         background-color: rgb(7,193,96);
-        font:16px "Microsoft yahei";
-        color: #FFF;
-        border-radius: 20px;
         margin-top: 17px;
     }
-    .register-button{
-        width: 240px;
-        height: 40px;
-        background-color: rgba(0, 183, 255, 0.815);
-        font:16px "Microsoft yahei";
-        color: #FFF;
-        border-radius: 20px;
+    /* a标签去除下划线 */
+    a{
+      text-decoration: none;
+    }
+    /* 图片居中 */
+    img{
+      display:block;
+      margin:auto;
     }
 </style>
 <script>

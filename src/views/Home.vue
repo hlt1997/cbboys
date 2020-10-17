@@ -22,8 +22,6 @@
       </mt-swipe>
     </div>
     <!--轮播图结束-->
-<<<<<<< HEAD
-=======
     <!--中部品牌栏开始-->
     <div class="brand">
       <img src="../../public/img/bottom-img/nanjiren.jpg" alt="">
@@ -74,7 +72,6 @@
     </div>
     <!--商品展示区结束-->
 
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -100,18 +97,6 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    
-
-   
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
   </div>
   <!--底部导航结束-->
 
@@ -209,13 +194,6 @@ export default {
       timer:'',
     }
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
   mounted(){
     setInterval(()=>{
       // 获取当前时间毫秒数
@@ -242,32 +220,6 @@ export default {
     
     
   },
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
-  // watch:{
-  //   tabbar(value){
-  //     if(value=='index'){
-  //       this.$router.push('/')
-  //     }if(value=='me'){
-  //       this.$router.push('/me')
-  //     }if(value=='message'){
-  //       this.$router.push('/message')
-  //     }if(value=='shopcart'){
-  //       this.$router.push('/shopcart')
-  //     }
-  //   }
-  // }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/master
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
->>>>>>> a48ab28f2d018022c439f63efa3a0fdad139f58b
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -285,9 +237,5 @@ export default {
       }
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 88f306156f2404c7dc3ced02a03d5c83cb59b285
 }
 </script>
