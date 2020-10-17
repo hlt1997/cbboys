@@ -9,14 +9,14 @@
         </mt-header>
     </header>
      <!-- 顶部结束 -->
-     <!--表单区域-->
   <div class="margin">
     <img src="../../public/img/index/index_01.jpg" alt="">
   </div>
+  <!-- 账户信息开始 -->
   <div class="margin">
     <mt-field 
         type="text" 
-        label="用户名" 
+        label="用户名：" 
         placeholder="请输入用户名"
         :attr="{maxleng:20}"
         v-model="username"
@@ -25,28 +25,41 @@
     </mt-field>
     <mt-field 
         type="password" 
-        label="密码" 
+        label="密码：" 
         placeholder="请输入密码"
         :attr="{maxleng:20,autocomplete:'off'}"
         v-model="password"
         :state="upwdStatus"
         @blur.native.capture="handle2">
     </mt-field>
+    <!-- 账户信息结束 -->
+   <div>    
+    <!-- 登录注册按钮 -->
     <mt-button @click="handle" class="login-button margin">用户登录</mt-button>
     <router-link to="/register"><mt-button  class="Register-button margin"> 立即注册</mt-button></router-link>
-
+    <!-- 登录注册按钮结束 -->
+   </div>
   </div>
 </div>
 </template>
 <style scoped>
-    .margin{
-      margin-top: 17px;
+  /* a标签去除下划线 */
+    a{
+      text-decoration: none;
     }
+    /* 图片与按钮居中 */
+    .margin,.margin img{
+       margin-top: 17px;
+       display:block;
+       margin: 17px auto;
+    }
+    /* 头部字体样式 */
     .header{
         background-color:#FFF;
         font:italic 20px "simhei";
         color: #000;
     }
+    /* 按钮样式 */
     .Register-button{
         width: 240px;
         height: 40px;
