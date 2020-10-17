@@ -73,11 +73,46 @@
       </div>
     </div>
     <!--商品展示区结束-->
+<<<<<<< HEAD
     <!--商品列表结束提示-->
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
+=======
+
+
+    <!--底部导航开始-->
+    <div>
+      <mt-tabbar v-model='tabbar' fixed>
+        <mt-tab-item id="index">
+          首页
+          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
+          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="shopcart">
+          购物车
+          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
+          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="message">
+          信息
+          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
+          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="me">
+          我的
+          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
+          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+      </mt-tabbar>
+    </div>
+
+
+   
+
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   </div>
   <!--底部导航结束-->
 </template>
@@ -216,7 +251,12 @@ export default {
       timer:'',
     }
   },
+<<<<<<< HEAD
   beforeCreate(){
+=======
+
+  mounted(){
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -240,6 +280,23 @@ export default {
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000)
   },
+<<<<<<< HEAD
+=======
+  // watch:{
+  //   tabbar(value){
+  //     if(value=='index'){
+  //       this.$router.push('/')
+  //     }if(value=='me'){
+  //       this.$router.push('/me')
+  //     }if(value=='message'){
+  //       this.$router.push('/message')
+  //     }if(value=='shopcart'){
+  //       this.$router.push('/shopcart')
+  //     }
+  //   }
+  // }
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   watch:{
     tabbar(value){
       // 跳转到主页
