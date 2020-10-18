@@ -2,31 +2,97 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
 import Me from '../views/Me'
 import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
 
 import Site from '../views/Site'
 import Details from '../views/Details'
 
+<<<<<<< HEAD
+=======
 
+
+<<<<<<< HEAD
+
+//import Message from '../views/Details'
+
+
+=======
+=======
+import Site from '../views/Site'
+import Details from '../views/Details'
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+=======
+import Site from '../views/Site'
+import Details from '../views/Details'
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
+
+=======
+import Site from '../views/Site'
+import Details from '../views/Details'
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+
+>>>>>>> 5f374d5360e88a7a0fbeb3918da11019f5175ade
 Vue.use(VueRouter)
 
 const routes = [
   {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
     path: '/site',
     component: Site
   },
   {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
     path:'/details',
     component:Details
   },
   {
+<<<<<<< HEAD
 
+=======
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
     path: '/shopcart',
     component: Shopcart
   },

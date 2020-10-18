@@ -76,6 +76,57 @@
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+    <!--底部导航开始-->
+    <div>
+      <mt-tabbar v-model='tabbar' fixed>
+        <mt-tab-item id="index">
+          首页
+          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
+          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="shopcart">
+          购物车
+          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
+          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="message">
+          信息
+          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
+          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="me">
+          我的
+          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
+          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+      </mt-tabbar>
+    </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+
+
+   
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
   </div>
   <!--底部导航结束-->
 </template>
@@ -211,6 +262,20 @@ export default {
       carousels:[]
     }
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  beforeCreate(){
+>>>>>>> 5f374d5360e88a7a0fbeb3918da11019f5175ade
+=======
+
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
   mounted(){
     setInterval(()=>{
       // 获取当前时间毫秒数
@@ -242,6 +307,31 @@ export default {
       console.log(res.data.results)
     })
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+  // watch:{
+  //   tabbar(value){
+  //     if(value=='index'){
+  //       this.$router.push('/')
+  //     }if(value=='me'){
+  //       this.$router.push('/me')
+  //     }if(value=='message'){
+  //       this.$router.push('/message')
+  //     }if(value=='shopcart'){
+  //       this.$router.push('/shopcart')
+  //     }
+  //   }
+  // }
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+>>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -259,5 +349,9 @@ export default {
       }
     }
   }
+<<<<<<< HEAD
+
+=======
+>>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
 }
 </script>
