@@ -123,7 +123,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
   html{
     width: 100%;
     overflow: hidden;
