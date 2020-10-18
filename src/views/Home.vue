@@ -8,17 +8,15 @@
       <img src="../../public/img/bottom-img/11.png" alt="">
     </div>
     <!--搜索框结束-->
-
     <!--轮播图开始-->
     <div class="swipe">
       <mt-swipe
         :showIndicators="true"
         :auto="3000"
         :speed="1000">
-        <mt-swipe-item><img src="../../public/img/carousel/banner1.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/carousel/banner2.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/carousel/banner3.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/carousel/banner4.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item v-for="(carousel,index) of carousels" :key="index">
+          <router-link :to="carousel.href"><img :src="carousel.img" alt=""></router-link>
+        </mt-swipe-item>
       </mt-swipe>
     </div>
     <!--轮播图结束-->
@@ -73,46 +71,11 @@
       </div>
     </div>
     <!--商品展示区结束-->
-<<<<<<< HEAD
     <!--商品列表结束提示-->
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
-=======
-
-
-    <!--底部导航开始-->
-    <div>
-      <mt-tabbar v-model='tabbar' fixed>
-        <mt-tab-item id="index">
-          首页
-          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="shopcart">
-          购物车
-          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
-          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="message">
-          信息
-          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="me">
-          我的
-          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
-
-
-   
-
-
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   </div>
   <!--底部导航结束-->
 </template>
@@ -204,7 +167,6 @@
     padding: 5px ;
     font-family: '微软雅黑 light';
   }
-  /* 商品列表容器*/
   /* 为商品列表添加弹性布局，换行显示*/
   .commodity {
     display: flex;
@@ -212,8 +174,6 @@
     flex-wrap: wrap;
     color: red;
   }
-  /* 每个商品容器*/
-
   /* 每个偶数商品加左外边距*/
   .commodity div:nth-child(even){
     margin-left: 10px;
@@ -224,8 +184,6 @@
     margin-top: 10px;
     width: 170px;
   }
-  /* 商品描述*/
-
   /*提示信息 */
   .hint p{
     margin-top: 10px;
@@ -249,14 +207,11 @@ export default {
       value:'',
       // 倒计时变量
       timer:'',
+      // 用于存储轮播图信息
+      carousels:[]
     }
   },
-<<<<<<< HEAD
-  beforeCreate(){
-=======
-
   mounted(){
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -278,25 +233,15 @@ export default {
       // 余数就是剩余秒数
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
-    },1000)
+    },1000);
+    this.axios.get('/carousel').then(res=>{
+      console.log(res.data.results)
+      this.carousels = res.data.results
+    });
+    this.axios.get('/list').then(res=>{
+      console.log(res.data.results)
+    })
   },
-<<<<<<< HEAD
-=======
-  // watch:{
-  //   tabbar(value){
-  //     if(value=='index'){
-  //       this.$router.push('/')
-  //     }if(value=='me'){
-  //       this.$router.push('/me')
-  //     }if(value=='message'){
-  //       this.$router.push('/message')
-  //     }if(value=='shopcart'){
-  //       this.$router.push('/shopcart')
-  //     }
-  //   }
-  // }
-
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   watch:{
     tabbar(value){
       // 跳转到主页
