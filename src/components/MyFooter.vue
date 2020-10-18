@@ -30,11 +30,9 @@
   a.is-selected{
     color: #d4237a !important;
   }
-.mint-tabbar>.mint-tab-item.is-selected{
+/* .mint-tabbar>.mint-tab-item.is-selected{
   background-color: #fff;
-}
-
-
+} */
 
 </style>
 <script>
@@ -53,6 +51,7 @@ export default {
       // 跳转到我的页面
         this.$router.push('/me')
       }if(value=='message'){
+        // this.tabbar = 'message'
         // 跳转到消息页面
         this.$router.push('/message')
       }if(value=='shopcart'){

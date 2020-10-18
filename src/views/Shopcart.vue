@@ -123,8 +123,13 @@
     </div>
   </div>
 </template>
+<<<<<<< HEAD
 <style scoped>
   
+=======
+<style>
+
+>>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
   #shopcart .underline{
     text-decoration: none;
     color:#000
