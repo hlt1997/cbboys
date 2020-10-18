@@ -1,13 +1,6 @@
 <template>
   <div class="home">
-    <!--顶部搜索框-->
-    <div class="search">
-      <p>历寒优品</p>
-      <input type="text" v-model="value" placeholder="请输入要搜索的商品">
-      <button>搜索</button>
-      <img src="../../public/img/bottom-img/11.png" alt="">
-    </div>
-    <!--搜索框结束-->
+    <search></search>
     <!--轮播图开始-->
     <div class="swipe">
       <mt-swipe
@@ -37,37 +30,13 @@
     <!--双十一活动栏结束-->
     <!--商品展示区开始-->
     <div class="commodity">
-      <div>
-        <img src="../../public/img/index/index_01.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_02.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_03.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_04.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_05.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_06.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_07.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_08.jpg" alt="">
-        <p>商品描述</p>
+      <div v-for="(list,index) of lists" :key="index">
+        <router-link :to="list.href"></router-link><img :src="list.pic" alt="">
+        <p>
+          商品名称：{{list.title}}<br>
+          商品介绍：{{list.details}}<br>
+          价格：￥{{list.price}}
+        </p>
       </div>
     </div>
     <!--商品展示区结束-->
@@ -76,109 +45,12 @@
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
-<<<<<<< HEAD
-=======
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
->>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
-    <!--底部导航开始-->
-    <div>
-      <mt-tabbar v-model='tabbar' fixed>
-        <mt-tab-item id="index">
-          首页
-          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="shopcart">
-          购物车
-          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
-          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="message">
-          信息
-          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="me">
-          我的
-          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
-
-
-   
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
->>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
->>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
   </div>
   <!--底部导航结束-->
 </template>
+
 <style scoped>
-/* 顶部搜索框下的图片*/
-  .search img{
-    width: 35px;
-    float: right;
-    margin-right: 10px;
-  }
-/* 顶部搜索框左侧文字*/
-
-  .search p{
-    float: left;
-    background: red;
-    padding: 5px 5px 0 5px;
-    color: #fff;
-    width: 40px;
-    margin-left: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-family: "华文行楷";
-  }
-/* 顶部搜索栏容器*/
-
-  .search{
-    margin-top: 10px;
-    text-align: center;
-  }
-/* 顶部搜索框*/
-
-  .search input{
-    border: 1px solid red;
-    border-radius: 15px 0 0 15px;
-    height: 30px;
-    font-size: 14px;
-  }
-/* 顶部搜索按钮*/
-
-  .search button{
-    height: 34px;
-    border-radius: 0 15px 15px 0;
-    vertical-align: top;
-    outline: none;
-    color: #fff;
-    background: red;
-    border: none;
-    font-size: 14px;
-    padding: 0 8px;
-  }
 /* 轮播图容器*/
-
   .swipe{
     margin-top: 20px;
     height: 150px;
@@ -223,17 +95,22 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color: red;
   }
   /* 每个偶数商品加左外边距*/
   .commodity div:nth-child(even){
     margin-left: 10px;
+  }
+  /*每个商品容器 */
+  .commodity>div{
+    width: 170px;
+    font-size: 14px;
   }
   /* 商品图片*/
   .commodity img{
     margin-bottom: 10px;
     margin-top: 10px;
     width: 170px;
+
   }
   /*提示信息 */
   .hint p{
@@ -243,39 +120,28 @@
     font-family: '微软雅黑';
     margin-bottom: 60px;
   }
-  
 </style>
 <script>
-  import MyFooter from "../components/MyFooter";
+// 引入底部导航组件
+import MyFooter from "../components/MyFooter";
+
+import Search from "../components/Search";
 
 export default {
   components:{
-    MyFooter
+    MyFooter,Search
   },
   data(){
     return{
-      // 顶部搜索框变量
-      value:'',
+
       // 倒计时变量
       timer:'',
       // 用于存储轮播图信息
-      carousels:[]
+      carousels:[],
+      // 用于存储商品列表的信息
+      lists:[]
     }
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  beforeCreate(){
->>>>>>> 5f374d5360e88a7a0fbeb3918da11019f5175ade
-=======
-
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
->>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
   mounted(){
     setInterval(()=>{
       // 获取当前时间毫秒数
@@ -304,34 +170,10 @@ export default {
       this.carousels = res.data.results
     });
     this.axios.get('/list').then(res=>{
-      console.log(res.data.results)
+      console.log(res.data.results);
+      this.lists = res.data.results
     })
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
-  // watch:{
-  //   tabbar(value){
-  //     if(value=='index'){
-  //       this.$router.push('/')
-  //     }if(value=='me'){
-  //       this.$router.push('/me')
-  //     }if(value=='message'){
-  //       this.$router.push('/message')
-  //     }if(value=='shopcart'){
-  //       this.$router.push('/shopcart')
-  //     }
-  //   }
-  // }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
->>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
->>>>>>> 1fda45d72bf7a291e80b2fc56baba0c10adb4f80
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -349,9 +191,5 @@ export default {
       }
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
 }
 </script>

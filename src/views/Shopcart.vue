@@ -124,11 +124,7 @@
   </div>
 </template>
 <style>
-  html{
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-  }
+
   #shopcart .underline{
     text-decoration: none;
   }
