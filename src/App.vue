@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 
     <router-view/>
@@ -10,23 +8,16 @@
 </template>
 
 
-=======
+
     <router-view/>
   </div>
 </template>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
 
-=======
     <router-view/>
   </div>
 </template>
->>>>>>> 5f374d5360e88a7a0fbeb3918da11019f5175ade
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
->>>>>>> e153c762366c0811fe789e2812a9387d65514d3f
+
 <style>
 /* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

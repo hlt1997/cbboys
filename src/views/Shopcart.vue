@@ -123,24 +123,22 @@
     </div>
   </div>
 </template>
-<style>
-  html{
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-  }
+<style scoped>
+  
   #shopcart .underline{
     text-decoration: none;
+    color:#000
   }
   #shopcart .site{
     margin:left;
     background-color:red;
-    color: white;
+    color:white;
     padding:1px 2px;
     
     border-radius:3px;
     
   }
+
   .underline span{
     font-size: 10px;
     margin-left:10px;
