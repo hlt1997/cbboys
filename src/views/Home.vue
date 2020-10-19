@@ -73,18 +73,13 @@
       </div>
     </div>
     <!--商品展示区结束-->
-<<<<<<< HEAD
+
     <!--商品列表结束提示-->
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -110,14 +105,12 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-<<<<<<< HEAD
-=======
 
 
    
 
 
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+
   </div>
   <!--底部导航结束-->
 </template>
@@ -256,16 +249,9 @@ export default {
       timer:'',
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  beforeCreate(){
->>>>>>> 5f374d5360e88a7a0fbeb3918da11019f5175ade
-=======
 
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   mounted(){
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
+
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -289,8 +275,6 @@ export default {
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000)
   },
-<<<<<<< HEAD
-=======
   // watch:{
   //   tabbar(value){
   //     if(value=='index'){
@@ -305,7 +289,6 @@ export default {
   //   }
   // }
 
->>>>>>> 1adacd349c0b925e8ede0c3be2fcabc7d249b1cd
   watch:{
     tabbar(value){
       // 跳转到主页
