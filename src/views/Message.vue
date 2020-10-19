@@ -25,10 +25,6 @@
     /* display: inline-block; */
     
   }
-  .options>p img{
-    /* vertical-align: middle; */
-    /* margin-top: 7px; */
-  }
 </style>
 <script>
 import MyFooter from "../components/MyFooter";
