@@ -54,6 +54,9 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+   
+=======
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -175,7 +178,8 @@ export default {
       // 用于存储轮播图信息
       carousels:[],
       // 用于存储商品列表的信息
-      lists:[]
+      lists:[],
+     
     }
   },
 <<<<<<< HEAD
