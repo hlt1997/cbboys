@@ -47,32 +47,7 @@
     </div>
     <my-footer></my-footer>
 
-    <!--底部导航开始-->
-    <div>
-      <mt-tabbar v-model='tabbar' fixed>
-        <mt-tab-item id="index">
-          首页
-          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="shopcart">
-          购物车
-          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
-          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="message">
-          信息
-          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="me">
-          我的
-          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
-
+   
   </div>
   <!--底部导航结束-->
 </template>
@@ -167,7 +142,8 @@ export default {
       // 用于存储轮播图信息
       carousels:[],
       // 用于存储商品列表的信息
-      lists:[]
+      lists:[],
+     
     }
   },
   mounted(){

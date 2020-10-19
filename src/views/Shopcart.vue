@@ -1,5 +1,5 @@
 <template>
-  <div id='shopcart'>
+  <div class='shopcart'>
     <mt-header></mt-header>
     <div>
       <router-link to="/site" class='underline'>
@@ -109,41 +109,41 @@
         <table></table>
         <div>
           <span>发票</span>
-          <p>不开发票
+          <p>
+            不开发票 
             <img src="../../public/img/bottom-img/dayuhao.png" alt="">
           </p>
         </div>
         <div >
           <span>支付方式</span>
-          <p>在线支付
+          <p>
+            在线支付 
             <img src="../../public/img/bottom-img/dayuhao.png" alt="">
           </p>
         </div>
       </div>
+      <div class='button'>
+        <button>确定</button>
+      </div>
+      <div class='a'></div>
     </div>
   </div>
 </template>
-<<<<<<< HEAD
+
 <style scoped>
   html{
     width: 100%;
     overflow: hidden;
     margin: 0;
   }
-=======
-<<<<<<< HEAD
-<style scoped>
-  
-=======
-<style>
 
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
->>>>>>> c55728ff7a0a32f62e8ad7b1743dbbf3366fc4a0
-  #shopcart .underline{
+
+
+  .shopcart .underline{
     text-decoration: none;
     color:#000
   }
-  #shopcart .site{
+  .shopcart .site{
     margin:left;
     background-color:red;
     color:white;
@@ -294,8 +294,8 @@
     
   }
   .three :nth-child(9) p{
-    position: relative;
-    right:-245px
+    position: absolute;
+    right:60px
   }
   .three :nth-child(9) span{
     color:red
@@ -309,16 +309,40 @@
     font-size:10px;
   }
   .four div{
-    margin-top:15px;
-    padding-left:10px
+    margin-top:25px;
+    padding-left:10px;
   }
   .four div :nth-child(2){
-    position: relative;
-    right:-270px;
-    top:-15px
+    width:100px;
+    
+    margin:-15px 0 0 73%;
+    
   }
   .four div :nth-child(2) img{
-    width:12px
+    width:12px;
+    
+  }
+  .button {
+    position: relative;
+    
+    position: fixed;
+    width:100%;
+    top:635px
+  }
+  .button button{
+     border:none;
+    width:90%;
+    margin-left:5%;
+    border-radius:20px;
+    height:40px;
+    background-color: #f00;
+    color:#fff;
+    outline:none;
+    position: fixed;
+  }
+  .a{
+    height: 100px;
+    border:1px solid red;
   }
   
 </style>
