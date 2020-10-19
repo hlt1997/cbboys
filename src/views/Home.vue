@@ -46,6 +46,36 @@
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
+<<<<<<< HEAD
+=======
+
+    <!--底部导航开始-->
+    <div>
+      <mt-tabbar v-model='tabbar' fixed>
+        <mt-tab-item id="index">
+          首页
+          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
+          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="shopcart">
+          购物车
+          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
+          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="message">
+          信息
+          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
+          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+        <mt-tab-item id="me">
+          我的
+          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
+          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
+        </mt-tab-item>
+      </mt-tabbar>
+    </div>
+
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
   </div>
 </template>
 
@@ -142,8 +172,13 @@ export default {
       lists:[]
     }
   },
+<<<<<<< HEAD
 
   mounted(){
+=======
+  mounted(){
+
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -175,6 +210,27 @@ export default {
     //   this.lists = res.data.results
     // })
   },
+<<<<<<< HEAD
+=======
+
+  // watch:{
+  //   tabbar(value){
+  //     if(value=='index'){
+  //       this.$router.push('/')
+  //     }if(value=='me'){
+  //       this.$router.push('/me')
+  //     }if(value=='message'){
+  //       this.$router.push('/message')
+  //     }if(value=='shopcart'){
+  //       this.$router.push('/shopcart')
+  //     }
+  //   }
+  // },
+
+
+
+
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -192,5 +248,9 @@ export default {
       }
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
 }
 </script>
