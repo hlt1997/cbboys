@@ -40,13 +40,23 @@
       </div>
     </div>
     <!--商品展示区结束-->
+<<<<<<< HEAD
+=======
 
+>>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
     <!--商品列表结束提示-->
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+   
+=======
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -73,8 +83,9 @@
       </mt-tabbar>
     </div>
 
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
+>>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
   </div>
-  <!--底部导航结束-->
 </template>
 
 <style scoped>
@@ -161,17 +172,27 @@ export default {
   },
   data(){
     return{
-
+      // tabbar:'index',
       // 倒计时变量
       timer:'',
       // 用于存储轮播图信息
       carousels:[],
       // 用于存储商品列表的信息
-      lists:[]
+      lists:[],
+     
     }
   },
+<<<<<<< HEAD
+  mounted(){
+=======
+<<<<<<< HEAD
+
+  mounted(){
+=======
   mounted(){
 
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
+>>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -194,33 +215,46 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
-    this.axios.get('/carousel').then(res=>{
-      console.log(res.data.results)
-      this.carousels = res.data.results
-    });
-    this.axios.get('/list').then(res=>{
-      console.log(res.data.results);
-      this.lists = res.data.results
-    })
+    // this.axios.get('/carousel').then(res=>{
+    //   console.log(res.data.results)
+    //   this.carousels = res.data.results
+    // });
+    // this.axios.get('/list').then(res=>{
+    //   console.log(res.data.results);
+    //   this.lists = res.data.results
+    // })
   },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+>>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
   // watch:{
   //   tabbar(value){
+  //     // 跳转到主页
   //     if(value=='index'){
   //       this.$router.push('/')
   //     }if(value=='me'){
+  //     // 跳转到我的页面
   //       this.$router.push('/me')
   //     }if(value=='message'){
+  //       // 跳转到消息页面
   //       this.$router.push('/message')
   //     }if(value=='shopcart'){
+  //       // 跳转到购物车
   //       this.$router.push('/shopcart')
   //     }
   //   }
+<<<<<<< HEAD
+  // }
+=======
   // },
 
 
 
 
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -238,6 +272,10 @@ export default {
       }
     }
   }
+<<<<<<< HEAD
+=======
 
+>>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
+>>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
 }
 </script>

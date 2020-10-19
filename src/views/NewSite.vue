@@ -1,5 +1,5 @@
 <template>
-  <div class="site">
+  <div class="newsite">
     <mt-header>
       <router-link to="/site" slot="left">
         <mt-button  icon="back" >
@@ -14,7 +14,7 @@
         <tr>
           <td>收货人</td>
           <td>
-            <input type="text" placeholder="姓名">
+            <input type="text" placeholder="姓名" v-model="shopname" @blur.native.capture='checkShopName'>
           </td>
         </tr>
         <tr>
@@ -23,7 +23,7 @@
             <select name="" id="">
               <option value="">+86</option>
             </select>
-            <input type="text" placeholder="手机号码">
+            <input type="text" placeholder="手机号码" v-model="shopphone" @blur.native.capture='checkShopPhone'>
           </td>
         </tr>
         <tr>
@@ -40,17 +40,23 @@
         </tr>
       </table>
     </div>
+    <div class="button">
+      <router-link to="/shopcart">
+        <button>保存并使用</button>
+      </router-link>
+      
+    </div>
   </div>
 </template>
 <style  scoped>
- .site :nth-child(2){
+ .newsite :nth-child(2){
    text-align:center;
   }
-  .site input {
+  .newsite input {
     border: none;
     background-color: rgb(250, 250, 250);
   }
-  .site select {
+  .newsite select {
     border: none;
   }
   .site-add table tr {
@@ -66,5 +72,44 @@
   }
   .site-add table textarea{
     margin-left: 0px;
+    resize: none;
+    border:none
   }
+  .newsite .button{
+    position: absolute;
+    bottom:0px;
+    width:100%;
+    position:fixed;
+    
+  }
+  .newsite .button button{
+    border:none;
+    width:90%;
+    margin-left:5%;
+    border-radius:20px;
+    height:40px;
+    background-color: #f00;
+    color:#fff;
+    outline:none;
+    
+  }
+  
 </style>
+<script>
+export default {
+  data(){
+    return{
+      shopname:'',
+      shopphone:'',
+    }
+  },
+  methods:{
+    // // checkShopName(){
+    //   let shopnameRegExp=/^[\d\w]{1,20}$/;
+    //   if(this.shopnameRegExp.test(this.shopname)){
+    //     this
+    //   }
+    // }
+  }
+}
+</script>

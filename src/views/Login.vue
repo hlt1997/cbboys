@@ -36,7 +36,7 @@
    <div>    
     <!-- 登录注册按钮 -->
     <mt-button @click="handle" class="login-button margin">用户登录</mt-button>
-    <router-link to="/register"><mt-button  class="Register-button margin"> 立即注册</mt-button></router-link>
+    <mt-button  class="Register-button margin" @click="register()"> 立即注册</mt-button>
     <!-- 登录注册按钮结束 -->
    </div>
   </div>
@@ -92,6 +92,10 @@ export default {
     }
   },
   methods:{
+    //注册页面跳转
+      register(){
+       this.$router.push("register")
+      },
     // 校验用户名
     handle1(){
       let nameReg=/^[0-9a-zA-Z_@\.]{6,20}$/;
