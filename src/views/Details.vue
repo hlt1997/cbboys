@@ -481,8 +481,9 @@
       margin-top: 10px;
       margin-bottom: 53px;
     }
-    .details .product-img{
+    .details .products-img{
       width: 100%;
+     
     }
     /* 底部价格说明总体文字样式 */
     .details .products-table td{
@@ -537,6 +538,7 @@
       background-color: #fff;
       position: fixed;
       bottom: 0;
+   
     }
     .details .last-down>.last-ul>li{
       margin: 0 10px;
@@ -560,7 +562,7 @@
       font-size: 14px;
     }
     /* 底部(--加入购物车--)导航栏的链接 */
-    .details .last-li-button :first-child >button{
+    .details .last-li-button :first-child button{
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
       background: linear-gradient(to right, #FFD700 , #ffa500);
@@ -568,7 +570,7 @@
       right: -70px;
     }
     /* 底部(--立即购买--)导航链接 */
-    .details .last-li-button :last-child >button{
+    .details .last-li-button :last-child button{
       border-top-right-radius:15px;
       border-bottom-right-radius:15px;
       background:linear-gradient(to right ,#f30 , #f00 );
