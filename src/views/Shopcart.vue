@@ -130,15 +130,9 @@
     overflow: hidden;
     margin: 0;
   }
-=======
-<<<<<<< HEAD
+
 <style scoped>
   
-=======
-<style>
-
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
->>>>>>> c55728ff7a0a32f62e8ad7b1743dbbf3366fc4a0
   #shopcart .underline{
     text-decoration: none;
     color:#000
