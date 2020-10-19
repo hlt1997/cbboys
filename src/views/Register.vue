@@ -37,7 +37,7 @@
       <!-- 登录注册按钮开始 -->
       <div  class="L_button">
        <mt-button @click="handle" class="register-button">免费注册</mt-button>
-       <router-link to="/login"><mt-button  class="login-button"> 已有账号,返回登录</mt-button></router-link>
+       <mt-button  class="login-button" @click="login()"> 已有账号,返回登录</mt-button>
       </div>
       <!-- 登录注册按钮结束 -->
     </div>    
@@ -88,6 +88,10 @@
       }
     },
     methods:{
+      //返回登录跳转
+      login(){
+       this.$router.push("/login")
+      },
       handle1(){
         // 1.验证用户名是否正确
         let userReg=/^[0-9a-zA-Z_@\.]{6,20}$/;
