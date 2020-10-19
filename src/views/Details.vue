@@ -27,8 +27,13 @@
         </div>
       </mt-header>
     </header>
-    <div>
-      <img src="../../public/img/detail/detail_img1.jpg" class="sideshow">
+    <div class="swipe">
+      <mt-swipe  :auto="50000">
+        <mt-swipe-item><img src="../../public/img/detail/detail_img1.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item><img src="../../public/img/detail/detail_img2.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item><img src="../../public/img/detail/detail_img3.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item><img src="../../public/img/detail/detail_img4.jpg" alt=""></mt-swipe-item>
+      </mt-swipe>
     </div>
     <!-- 第二栏开始 -->
     <!-- 第二栏设置唯一父元素    -- money-->
@@ -234,7 +239,9 @@
         <ul class="last-ul">
           <li>
             <ul>
+              <!-- 店铺连接   -->
               <router-link to="/">
+              <!-- 店铺下的图片以及文字的内容 -->
                 <li><img src="../../public/img/details-image/店铺.png" class="last-img"></li>
                 <li>店铺</li>
               </router-link>
@@ -242,6 +249,7 @@
           </li>
           <li>
             <ul>
+              <!-- 客服导航栏的内容 -->
               <router-link to="/">             
                 <li><img src="../../public/img/details-image/客服.png" class="last-img"></li>
                 <li>客服</li>
@@ -250,15 +258,27 @@
           </li>
           <li>
             <ul>
-              <div>
-                <li><img src="../../public/img/details-image/收藏2.png"   class="last-img"></li>
-                <li>收藏</li>
+              <div class="last-ul-div">
+                <!-- 收藏栏的内容 -->
+                <li>
+                  <!-- 点击函数--lastImg--用v-if--来实现图片切换效果 -->
+                  <img src="../../public/img/details-image/收藏2.png"   class="last-img" v-if="downIcon == false"  @click="lastImg">
+                  <!-- 点击函数--isLastImg--用v-else--来实现图片切换效果 -->
+                  <img src="../../public/img/details-image/收藏1.png" class="last-img" v-else @click="isLastImg">
+                </li>
+                <!-- class名，点击函数出发后方便查找中间的内容，便于修改 -->
+                <li class="collect">收藏</li>
               </div>
             </ul>
           </li>
-          <li>
-            <button class="last-button">加入购物车</button>
-            <button class="last-button">立即购买</button>
+          <li class="last-li-button">
+            <!-- 加入购物车的内容以及立即购买的内容 -->
+            <router-link to="/">
+              <button class="last-button">加入购物车</button>   
+            </router-link>  
+            <router-link to="/shopcart">
+              <button class="last-button">立即购买</button>
+            </router-link>          
           </li>
         </ul>
     </div>
@@ -276,7 +296,12 @@
     /* 顶部导航栏图片 */
     .details .sideshow{
       width: 100%;
-      height: 300px;
+      height: 350px;
+    }
+    /* 顶部轮播图样式 */
+    .details .swipe{
+      height: 350px;
+      margin: 0 10px;
     }
     /*第二栏 价格，详情介绍 总布局*/
     .details .money{
@@ -460,8 +485,9 @@
       margin-top: 10px;
       margin-bottom: 53px;
     }
-    .details .product-img{
+    .details .products-img{
       width: 100%;
+     
     }
     /* 底部价格说明总体文字样式 */
     .details .products-table td{
@@ -501,22 +527,29 @@
     .details .last-img{
       width: 20px;
     }
-    /*  */
+    /* li 下的 ul 文字中的样式，以及对齐方式 */
     .details .last-down>.last-ul>li>ul{
       text-align: center;
       padding: 3px 5px;
       font-size: 12px;
     }
+    /* 每个最小--li--之间的距离 */
     .details .last-down>.last-ul>li>ul li{
       margin: 5px 0;
     }
+    /* 底部导航栏背景颜色 */
     .details .last-down{
       background-color: #fff;
       position: fixed;
       bottom: 0;
+   
     }
     .details .last-down>.last-ul>li{
       margin: 0 10px;
+    }
+    /* 底部导航栏---收藏---宽度设置 */
+    .details .last-ul-div{
+      width: 36px;
     }
     /* 底部链接--店铺--客服--收藏--样式 */
     .details .last-down>.last-ul>li>ul :last-child{
@@ -526,15 +559,52 @@
     /*最后 底部button样式 */
     .details .last-button{
       border: 0;
-      padding: 10px;
-      background-color: orange;
+      padding:5px 10px;
       color: #fff;
       font-weight: bloder;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    /* 底部(--加入购物车--)导航栏的链接 */
+    .details .last-li-button :first-child button{
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      background: linear-gradient(to right, #FFD700 , #ffa500);
+      position: absolute;
+      right: -70px;
+    }
+    /* 底部(--立即购买--)导航链接 */
+    .details .last-li-button :last-child button{
+      border-top-right-radius:15px;
+      border-bottom-right-radius:15px;
+      background:linear-gradient(to right ,#f30 , #f00 );
+      padding:5px 17px;
+      position: absolute;
+      right: -160px;
     }
 </style>
 
 <script>
 export default {
-   
+   data(){
+     return {
+      //  变量downIcon先为true
+       downIcon:false
+     }
+   },
+  methods:{
+    // 收藏点击函数，
+    lastImg(){
+      this.downIcon = true;
+      // 找到要修改的的元素，并获取中间的文本内容，修改文本内容为“以收藏”
+      document.querySelector('.collect').innerHTML = "已收藏"
+    },
+    // 以收藏点击函数
+    isLastImg(){
+      this.downIcon = false;
+      // 找到要修改的元素，并获取中间的文本内容，修改文本内容为“收藏”
+      document.querySelector('.collect').innerHTML = "收藏"
+    }
+  }
 }
 </script>

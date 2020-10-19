@@ -47,6 +47,7 @@
           <li><img src="../../public/img/me/activity.png" alt="">最新活动</li>
           <li><img src="../../public/img/me/site.png" alt="">地址管理</li>
           <li><img src="../../public/img/me/service.png" alt="">客服热线</li>
+          <router-link to="/"><li><img src="../../public/img/me/logoff.png" alt="">退出登录</li></router-link>
         </ul>
     </div>
     <!-- 表单区域结束 -->
@@ -96,6 +97,7 @@
   /* a标记去除下划线 */
   a{
     text-decoration: none;
+    color:#000;
     height: 40px;
   }
   /* 个人信息部分文字与头像距离 */
@@ -150,7 +152,7 @@
     margin-bottom:10px;
   }
   .Sheet li{
-    margin-bottom:3px;
+    margin-bottom:4px;
     font:550 17px "Microsoft yahei";
   }
   /* 表单文字前图片大小 */
@@ -163,6 +165,7 @@
     width: 38px;
     margin-right: 12px;
   }
+
 
 </style>
 <script>
