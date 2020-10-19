@@ -2,7 +2,7 @@
   <div class="details">
     <header>
       <!-- 顶部导航栏 -->
-      <mt-header title="123" fixed>
+      <mt-header fixed>
         <!-- 左边的返回键 -->
         <div slot='left'>
           <router-link to='/'>
@@ -30,9 +30,6 @@
     <div class="swipe">
       <mt-swipe  :auto="50000">
         <mt-swipe-item><img src="../../public/img/detail/detail_img1.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/detail/detail_img2.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/detail/detail_img3.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/detail/detail_img4.jpg" alt=""></mt-swipe-item>
       </mt-swipe>
     </div>
     <!-- 第二栏开始 -->
@@ -570,8 +567,6 @@
       border-top-left-radius: 15px;
       border-bottom-left-radius: 15px;
       background: linear-gradient(to right, #FFD700 , #ffa500);
-      position: absolute;
-      right: -70px;
     }
     /* 底部(--立即购买--)导航链接 */
     .details .last-li-button :last-child button{
@@ -579,8 +574,6 @@
       border-bottom-right-radius:15px;
       background:linear-gradient(to right ,#f30 , #f00 );
       padding:5px 17px;
-      position: absolute;
-      right: -160px;
     }
 </style>
 
@@ -589,7 +582,8 @@ export default {
    data(){
      return {
       //  变量downIcon先为true
-       downIcon:false
+       downIcon:false,
+       image:[],
      }
    },
   methods:{
@@ -605,6 +599,13 @@ export default {
       // 找到要修改的元素，并获取中间的文本内容，修改文本内容为“收藏”
       document.querySelector('.collect').innerHTML = "收藏"
     }
+  },
+  mounted(){
+    this.axios.get('/image').then(res=>{
+      console.log(res.data.result);
+      this.image = res.data.result;
+    });
+    
   }
 }
 </script>
