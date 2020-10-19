@@ -1,24 +1,15 @@
 <template>
   <div class="home">
-    <!--顶部搜索框-->
-    <div class="search">
-      <p>历寒优品</p>
-      <input type="text" v-model="value" placeholder="请输入要搜索的商品">
-      <button>搜索</button>
-      <img src="../../public/img/bottom-img/11.png" alt="">
-    </div>
-    <!--搜索框结束-->
-
+    <search></search>
     <!--轮播图开始-->
     <div class="swipe">
       <mt-swipe
         :showIndicators="true"
         :auto="3000"
         :speed="1000">
-        <mt-swipe-item><img src="../../public/img/carousel/banner1.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/carousel/banner2.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/carousel/banner3.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../../public/img/carousel/banner4.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item v-for="(carousel,index) of carousels" :key="index">
+          <router-link :to="carousel.href"><img :src="carousel.img" alt=""></router-link>
+        </mt-swipe-item>
       </mt-swipe>
     </div>
     <!--轮播图结束-->
@@ -39,45 +30,23 @@
     <!--双十一活动栏结束-->
     <!--商品展示区开始-->
     <div class="commodity">
-      <div>
-        <img src="../../public/img/index/index_01.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_02.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_03.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_04.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_05.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_06.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_07.jpg" alt="">
-        <p>商品描述</p>
-      </div>
-      <div>
-        <img src="../../public/img/index/index_08.jpg" alt="">
-        <p>商品描述</p>
+      <div v-for="(list,index) of lists" :key="index">
+        <router-link :to="list.href"></router-link><img :src="list.pic" alt="">
+        <p>
+          商品名称：{{list.title}}<br>
+          商品介绍：{{list.details}}<br>
+          价格：￥{{list.price}}
+        </p>
       </div>
     </div>
     <!--商品展示区结束-->
+
     <!--商品列表结束提示-->
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
+
     <!--底部导航开始-->
     <div>
       <mt-tabbar v-model='tabbar' fixed>
@@ -103,58 +72,13 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
+
   </div>
   <!--底部导航结束-->
 </template>
+
 <style scoped>
-/* 顶部搜索框下的图片*/
-  .search img{
-    width: 35px;
-    float: right;
-    margin-right: 10px;
-  }
-/* 顶部搜索框左侧文字*/
-
-  .search p{
-    float: left;
-    background: red;
-    padding: 5px 5px 0 5px;
-    color: #fff;
-    width: 40px;
-    margin-left: 10px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-family: "华文行楷";
-  }
-/* 顶部搜索栏容器*/
-
-  .search{
-    margin-top: 10px;
-    text-align: center;
-  }
-/* 顶部搜索框*/
-
-  .search input{
-    border: 1px solid red;
-    border-radius: 15px 0 0 15px;
-    height: 30px;
-    font-size: 14px;
-  }
-/* 顶部搜索按钮*/
-
-  .search button{
-    height: 34px;
-    border-radius: 0 15px 15px 0;
-    vertical-align: top;
-    outline: none;
-    color: #fff;
-    background: red;
-    border: none;
-    font-size: 14px;
-    padding: 0 8px;
-  }
 /* 轮播图容器*/
-
   .swipe{
     margin-top: 20px;
     height: 150px;
@@ -194,28 +118,28 @@
     padding: 5px ;
     font-family: '微软雅黑 light';
   }
-  /* 商品列表容器*/
   /* 为商品列表添加弹性布局，换行显示*/
   .commodity {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    color: red;
   }
-  /* 每个商品容器*/
-
   /* 每个偶数商品加左外边距*/
   .commodity div:nth-child(even){
     margin-left: 10px;
+  }
+  /*每个商品容器 */
+  .commodity>div{
+    width: 170px;
+    font-size: 14px;
   }
   /* 商品图片*/
   .commodity img{
     margin-bottom: 10px;
     margin-top: 10px;
     width: 170px;
-  }
-  /* 商品描述*/
 
+  }
   /*提示信息 */
   .hint p{
     margin-top: 10px;
@@ -224,24 +148,30 @@
     font-family: '微软雅黑';
     margin-bottom: 60px;
   }
-  
 </style>
 <script>
-  import MyFooter from "../components/MyFooter";
+// 引入底部导航组件
+import MyFooter from "../components/MyFooter";
+
+import Search from "../components/Search";
 
 export default {
   components:{
-    MyFooter
+    MyFooter,Search
   },
   data(){
     return{
-      // 顶部搜索框变量
-      value:'',
+
       // 倒计时变量
       timer:'',
+      // 用于存储轮播图信息
+      carousels:[],
+      // 用于存储商品列表的信息
+      lists:[]
     }
   },
   mounted(){
+
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -263,8 +193,17 @@ export default {
       // 余数就是剩余秒数
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
-    },1000)
+    },1000);
+    this.axios.get('/carousel').then(res=>{
+      console.log(res.data.results)
+      this.carousels = res.data.results
+    });
+    this.axios.get('/list').then(res=>{
+      console.log(res.data.results);
+      this.lists = res.data.results
+    })
   },
+
   // watch:{
   //   tabbar(value){
   //     if(value=='index'){
@@ -277,7 +216,10 @@ export default {
   //       this.$router.push('/shopcart')
   //     }
   //   }
-  // }
+  // },
+
+
+
 
   watch:{
     tabbar(value){
@@ -296,5 +238,6 @@ export default {
       }
     }
   }
+
 }
 </script>

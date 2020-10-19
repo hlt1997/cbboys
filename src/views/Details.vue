@@ -151,6 +151,7 @@
             <button class="four-button">性价比高()</button>
             <button class="four-button">质量好()</button>
             <button class="four-button">很舒适()</button>
+          
             <div>
               <!-- 某某用户的评价，最近几天的 -->
               <img src="../../public/img/details-image/头像 男孩.png" alt="">
@@ -161,6 +162,7 @@
                 <img src="../../public/img/detail/detail_img1.jpg" class="four-img">
               </div>
             </div>
+          
           </div>
         </div>
         <hr>
@@ -382,6 +384,7 @@
     }
     /* 第四栏导航全体布局 */
     .details .four{
+      
       margin: 15px 10px;
       background: #fff;
       border-radius: 5px;
@@ -473,6 +476,7 @@
     }
     /* 公益宝贝主体背景 */
     .details .good-baby{
+     
       background: #fff;
       padding: 10px 0;
     }

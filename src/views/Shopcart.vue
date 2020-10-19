@@ -123,24 +123,36 @@
     </div>
   </div>
 </template>
+<<<<<<< HEAD
 <style scoped>
   html{
     width: 100%;
     overflow: hidden;
     margin: 0;
   }
+=======
+<<<<<<< HEAD
+<style scoped>
+  
+=======
+<style>
+
+>>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
+>>>>>>> c55728ff7a0a32f62e8ad7b1743dbbf3366fc4a0
   #shopcart .underline{
     text-decoration: none;
+    color:#000
   }
   #shopcart .site{
     margin:left;
     background-color:red;
-    color: white;
+    color:white;
     padding:1px 2px;
     
     border-radius:3px;
     
   }
+
   .underline span{
     font-size: 10px;
     margin-left:10px;
