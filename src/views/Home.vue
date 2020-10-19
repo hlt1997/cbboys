@@ -40,25 +40,11 @@
       </div>
     </div>
     <!--商品展示区结束-->
-<<<<<<< HEAD
-
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
     <!--商品列表结束提示-->
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
     <my-footer></my-footer>
-<<<<<<< HEAD
-
-    
-
-
-   
-
-
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
   </div>
   <!--底部导航结束-->
 </template>
@@ -147,7 +133,7 @@ export default {
   },
   data(){
     return{
-
+      // tabbar:'index',
       // 倒计时变量
       timer:'',
       // 用于存储轮播图信息
@@ -156,16 +142,7 @@ export default {
       lists:[]
     }
   },
-<<<<<<< HEAD
-
-  beforeCreate(){
-
-  },
   mounted(){
-
-=======
-  mounted(){
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -197,46 +174,22 @@ export default {
       this.lists = res.data.results
     })
   },
-<<<<<<< HEAD
-
   // watch:{
   //   tabbar(value){
+  //     // 跳转到主页
   //     if(value=='index'){
   //       this.$router.push('/')
   //     }if(value=='me'){
+  //     // 跳转到我的页面
   //       this.$router.push('/me')
   //     }if(value=='message'){
+  //       // 跳转到消息页面
   //       this.$router.push('/message')
   //     }if(value=='shopcart'){
+  //       // 跳转到购物车
   //       this.$router.push('/shopcart')
   //     }
   //   }
-  // },
-
-
-
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
-  watch:{
-    tabbar(value){
-      // 跳转到主页
-      if(value=='index'){
-        this.$router.push('/')
-      }if(value=='me'){
-      // 跳转到我的页面
-        this.$router.push('/me')
-      }if(value=='message'){
-        // 跳转到消息页面
-        this.$router.push('/message')
-      }if(value=='shopcart'){
-        // 跳转到购物车
-        this.$router.push('/shopcart')
-      }
-    }
-  }
-<<<<<<< HEAD
-
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
+  // }
 }
 </script>

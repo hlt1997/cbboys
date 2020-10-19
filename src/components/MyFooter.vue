@@ -39,24 +39,30 @@
 export default {
   data(){
     return{
-      // 选项卡变量
-      tabbar:'index',
+      // 选项卡变量\
+      tabbar:'index'
+      // tabbar:this.selected,
+      // atabs:this.tabs
   }},
+  props:{
+    selected:String
+  },
+
    watch:{
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
-        this.$router.push('/')
+        this.$router.push('/').catch(e=>{})
       }if(value=='me'){
       // 跳转到我的页面
-        this.$router.push('/me')
+        this.$router.push('/me').catch(e=>{})
       }if(value=='message'){
         // this.tabbar = 'message'
         // 跳转到消息页面
-        this.$router.push('/message')
+        this.$router.push('/message').catch(e=>{})
       }if(value=='shopcart'){
         // 跳转到购物车
-        this.$router.push('/shopcart')
+        this.$router.push('/shopcart').catch(e=>{})
       }
     }
   }

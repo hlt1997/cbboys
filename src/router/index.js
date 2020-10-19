@@ -10,47 +10,21 @@ import Register from '../views/Register'
 import Login from '../views/Login'
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
 import Site from '../views/Site'
 import Details from '../views/Details'
 import Newsite from '../views/NewSite'
 
 
-<<<<<<< HEAD
-
-//import Message from '../views/Details'
-
-
-
-// import Site from '../views/Site'
-// import Details from '../views/Details'
-
-
-// import Site from '../views/Site'
-// import Details from '../views/Details'
-
-// import Site from '../views/Site'
-// import Details from '../views/Details'
-
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
 Vue.use(VueRouter)
 
 const routes = [
   {
 
-<<<<<<< HEAD
     path: '/newsite',
     component: Newsite
   },
   {
 
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
     path: '/site',
     component: Site
   },
@@ -60,11 +34,6 @@ const routes = [
     component:Details
   },
   {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
     path: '/shopcart',
     component: Shopcart
   },
@@ -104,10 +73,12 @@ const routes = [
 const router = new VueRouter({
   routes
 })
+
 ////////
-const originalPush = VueRouter.prototype.push
-   VueRouter.prototype.push = function push(location) {
-   return originalPush.call(this, location).catch(err => err)
-}
+// 解决切换导航栏重复点击选项卡报错
+// const originalPush = VueRouter.prototype.push
+//    VueRouter.prototype.push = function push(location) {
+//    return originalPush.call(this, location).catch(err => err)
+// }
 /////////
 export default router
