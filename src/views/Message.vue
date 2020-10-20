@@ -96,41 +96,6 @@
   .options>p:nth-child(3){
     background-color: #F9C810;
   }
-<<<<<<< HEAD
-
-/*每个聊天信息列表容器 */
-  .chat{
-    margin-bottom: 60px;
-  }
-  .chat>div{
-    display: flex;
-    padding-left: 10px;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-    padding: 10px;
-  }
-/*每个聊天信息列表容器下的大图标 */
-  .chat>div>div:first-child img{
-    text-align: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-/*每个聊天信息列表容器下的品牌 */
-  .chat_msg>p:first-child{
-    font-size: 18px;
-    margin-top: 5px;
-  }
-  
-/*每个聊天信息列表容器下的聊天信息栏 */
-  .chat_msg>p:last-child{
-    margin-top: 8px;
-    font-size: 14px;
-    color: #999;
-  }
-=======
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
 </style>
 <script>
 import MyFooter from "../components/MyFooter";
