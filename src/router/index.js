@@ -6,36 +6,22 @@ import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
-<<<<<<< HEAD
 import Site from '../views/Site'
 import Details from '../views/Details'
 import NewSite from '../views/NewSite'
-=======
 
-import Site from '../views/Site'
-import Details from '../views/Details'
-import Newsite from '../views/NewSite'
-
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
 
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-<<<<<<< HEAD
-=======
-
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
     path: '/newsite',
     component: NewSite
   },
   {
-<<<<<<< HEAD
-=======
 
 
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
     path: '/site',
     component: Site
   },
@@ -44,12 +30,9 @@ const routes = [
     component:Details
   },
   {
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
     path: '/shopcart',
     component: Shopcart
   },
