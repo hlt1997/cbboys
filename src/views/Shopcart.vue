@@ -129,37 +129,10 @@
     </div>
   </div>
 </template>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<style>
-
-=======
-<<<<<<< HEAD
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
-<style scoped>
-  html{
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-  }
-
-<<<<<<< HEAD
 <style scoped>
   
-=======
-<<<<<<< HEAD
 
-
-  .shopcart .underline{
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
->>>>>>> c55728ff7a0a32f62e8ad7b1743dbbf3366fc4a0
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
->>>>>>> 35acafa93cfc79cbf8ed63ba3d2ef2cb077e960f
   #shopcart .underline{
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
     text-decoration: none;
     color:#000
   }

@@ -9,6 +9,24 @@
     <!--搜索框结束-->
 </template>
 <style scoped>
+/* 顶部搜索栏容器*/
+.search{
+  text-align: center;
+  height: 50px;
+  padding-top: 10px;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0px;
+  z-index: 1;
+}
+.search::after{
+  content: "";
+  display: block;
+  /* height: 100px; */
+  clear: both;
+}
 /* 顶部搜索框下的图片*/
   .search img{
     width: 35px;
@@ -28,12 +46,7 @@
     font-size: 16px;
     font-family: "华文行楷";
   }
-/* 顶部搜索栏容器*/
 
-  .search{
-    margin-top: 10px;
-    text-align: center;
-  }
 /* 顶部搜索框*/
 
   .search input{

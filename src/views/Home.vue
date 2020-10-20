@@ -31,34 +31,23 @@
     <!--商品展示区开始-->
     <div class="commodity">
       <div v-for="(list,index) of lists" :key="index">
-        <router-link :to="list.href"></router-link><img :src="list.pic" alt="">
+        <router-link :to="list.href"><img :src="list.pic" alt=""></router-link>
         <p>
-          商品名称：{{list.title}}<br>
-          商品介绍：{{list.details}}<br>
-          价格：￥{{list.price}}
+          <!-- <span>商品名称：{{list.title}}</span><br> -->
+          <span>{{list.details}}</span><br>
+          <span>￥</span>
+          <span>{{list.price}}</span>
+          
         </p>
       </div>
     </div>
     <!--商品展示区结束-->
-<<<<<<< HEAD
-=======
-
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
     <!--商品列表结束提示-->
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
-    <my-footer></my-footer>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-   
-=======
     <!--底部导航开始-->
-    <div>
+    <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
         <mt-tab-item id="index">
           首页
@@ -82,16 +71,14 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
+    <!--底部导航结束-->
   </div>
 </template>
 
 <style scoped>
 /* 轮播图容器*/
   .swipe{
-    margin-top: 20px;
+    margin-top: 60px;
     height: 150px;
   }
 /* 轮播图下的图片*/
@@ -146,10 +133,31 @@
   }
   /* 商品图片*/
   .commodity img{
-    margin-bottom: 10px;
+    border-radius: 8px 8px 0 0;
     margin-top: 10px;
     width: 170px;
 
+  }
+  /*商品信息 */
+  .commodity p{
+    height: auto;
+    padding: 5px;
+    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+  }
+  .commodity p>span:first-child{
+    font-weight: 500;
+    font-family: '微软雅黑';
+
+  }
+  .commodity p>span:nth-child(3){
+    color: red;
+  }
+  .commodity p>span:last-child{
+    color: red;
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 18px;
   }
   /*提示信息 */
   .hint p{
@@ -158,6 +166,10 @@
     border-top: 1px dashed #aaa;
     font-family: '微软雅黑';
     margin-bottom: 60px;
+  }
+  /*设置底部选项卡选中时的颜色 */
+  a.is-selected{
+    color: #d4237a !important;
   }
 </style>
 <script>
@@ -172,7 +184,7 @@ export default {
   },
   data(){
     return{
-      // tabbar:'index',
+      tabbar:'index',
       // 倒计时变量
       timer:'',
       // 用于存储轮播图信息
@@ -182,17 +194,8 @@ export default {
      
     }
   },
-<<<<<<< HEAD
-  mounted(){
-=======
-<<<<<<< HEAD
 
   mounted(){
-=======
-  mounted(){
-
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -215,67 +218,31 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
-    // this.axios.get('/carousel').then(res=>{
-    //   console.log(res.data.results)
-    //   this.carousels = res.data.results
-    // });
-    // this.axios.get('/list').then(res=>{
-    //   console.log(res.data.results);
-    //   this.lists = res.data.results
-    // })
+    this.axios.get('/carousel').then(res=>{
+      console.log(res.data.results)
+      this.carousels = res.data.results
+    });
+    this.axios.get('/list').then(res=>{
+      console.log(res.data.results);
+      this.lists = res.data.results
+    })
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
-  // watch:{
-  //   tabbar(value){
-  //     // 跳转到主页
-  //     if(value=='index'){
-  //       this.$router.push('/')
-  //     }if(value=='me'){
-  //     // 跳转到我的页面
-  //       this.$router.push('/me')
-  //     }if(value=='message'){
-  //       // 跳转到消息页面
-  //       this.$router.push('/message')
-  //     }if(value=='shopcart'){
-  //       // 跳转到购物车
-  //       this.$router.push('/shopcart')
-  //     }
-  //   }
-<<<<<<< HEAD
-  // }
-=======
-  // },
-
-
-
-
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
   watch:{
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
-        this.$router.push('/')
+        this.$router.push('/').catch(e=>{})
       }if(value=='me'){
       // 跳转到我的页面
-        this.$router.push('/me')
+        this.$router.push('/me').catch(e=>{})
       }if(value=='message'){
         // 跳转到消息页面
-        this.$router.push('/message')
+        this.$router.push('/message').catch(e=>{})
       }if(value=='shopcart'){
         // 跳转到购物车
-        this.$router.push('/shopcart')
+        this.$router.push('/shopcart').catch(e=>{})
       }
     }
-  }
-<<<<<<< HEAD
-=======
-
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
+  },
 }
 </script>
