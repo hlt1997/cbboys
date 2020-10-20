@@ -6,10 +6,19 @@ import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
+<<<<<<< HEAD
 import Site from '../views/Site'
 import Details from '../views/Details'
 import NewSite from '../views/NewSite'
 
+=======
+
+
+import Site from '../views/Site'
+import Details from '../views/Details'
+import NewSite from '../views/NewSite'
+
+>>>>>>> 90e524f90bf987f60e9c972322b490075b907492
 
 
 Vue.use(VueRouter)
@@ -20,7 +29,10 @@ const routes = [
     component: NewSite
   },
   {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 90e524f90bf987f60e9c972322b490075b907492
 
     path: '/site',
     component: Site
@@ -30,9 +42,12 @@ const routes = [
     component:Details
   },
   {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 90e524f90bf987f60e9c972322b490075b907492
     path: '/shopcart',
     component: Shopcart
   },
@@ -72,8 +87,4 @@ const routes = [
 const router = new VueRouter({
   routes
 })
-const originalPush = VueRouter.prototype.push
-   VueRouter.prototype.push = function push(location) {
-   return originalPush.call(this, location).catch(err => err)
-}
 export default router

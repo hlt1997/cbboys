@@ -11,24 +11,43 @@
       </div>
     </mt-header>
     <div class='site-history'>
-      dfhskajlfhdska
-
+      收货地址
     </div>
    
-    <!-- <div class='button' >
-      <button>新增收货地址</button>
-    </div> -->
+    <div class='button' >
+      <router-link to="/newsite">
+        <button>+新增收货地址</button>
+      </router-link>
+    </div>
+    
   </div>
 </template>
 <style scoped>
-  .site :nth-child(2){
-    position:absolute;
-  }
+  
   .site .site-history{
-    border:1px solid red
+    
+    width:100%;
+    text-align:center;
+    margin-top:10px
   }
-  
-  
+  .site .button{
+    position: absolute;
+    bottom:3px;
+    width:100%;
+    position:fixed;
+  }
+  .site .button button{
+    border:none;
+    width:90%;
+    margin-left:5%;
+    border-radius:20px;
+    height:40px;
+    background-color: #f00;
+    color:#fff;
+    outline:none;
+    
+  }
+ 
     
     
  
