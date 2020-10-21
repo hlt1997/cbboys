@@ -46,9 +46,6 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
-<<<<<<< HEAD
-    <my-footer></my-footer>
-=======
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -75,20 +72,23 @@
       </mt-tabbar>
     </div>
     <!--底部导航结束-->
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
   </div>
 </template>
 
 <style scoped>
 /* 轮播图容器*/
   .swipe{
+    margin: auto;
     margin-top: 60px;
-    height: 150px;
+    height: 180px;
   }
 /* 轮播图下的图片*/
 
   .swipe img{
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
   }
 /* 品牌容器*/
 
@@ -128,7 +128,7 @@
   }
   /* 每个偶数商品加左外边距*/
   .commodity div:nth-child(even){
-    margin-left: 10px;
+    margin-left: 10px; 
   }
   /*每个商品容器 */
   .commodity>div{
@@ -198,13 +198,7 @@ export default {
      
     }
   },
-<<<<<<< HEAD
   mounted(){
-
-=======
-
-  mounted(){
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -228,18 +222,13 @@ export default {
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
     this.axios.get('/carousel').then(res=>{
-      console.log(res.data.results)
       this.carousels = res.data.results
     });
     this.axios.get('/list').then(res=>{
-      console.log(res.data.results);
       this.lists = res.data.results
     })
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
+ 
   watch:{
     tabbar(value){
       // 跳转到主页
@@ -256,10 +245,6 @@ export default {
         this.$router.push('/shopcart').catch(e=>{})
       }
     }
-<<<<<<< HEAD
   }
-=======
-  },
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
 }
 </script>

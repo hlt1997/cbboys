@@ -3,9 +3,6 @@
 
     <router-view/>
   </div>
-<<<<<<< HEAD
-</template>
-=======
 
 
 </template>
@@ -21,5 +18,4 @@
 
 </style>
 
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
 
