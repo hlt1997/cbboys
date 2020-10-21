@@ -7,65 +7,31 @@ import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
 
-<<<<<<< HEAD
-import Site from '../views/Site'
-import Details from '../views/Details'
-import NewSite from '../views/NewSite'
-
-=======
-import Site from '../views/Site'
-import Details from '../views/Details'
-import NewSite from '../views/NewSite'
-
-
-
-
-=======
-<<<<<<< HEAD
-import Site from '../views/Site'
-import Details from '../views/Details'
-import NewSite from '../views/NewSite'
-
-=======
-
 
 import Site from '../views/Site'
 import Details from '../views/Details'
 import NewSite from '../views/NewSite'
 
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
 
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
+
+
+
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
+
+
     path: '/newsite',
     component: NewSite
   },
   {
-<<<<<<< HEAD
-     path: '/site',
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
 
     path: '/site',
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
+
     component: Site
   },
   {
@@ -73,20 +39,7 @@ const routes = [
     component:Details
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
-    path: '/shopcart',
+    path: '/shopcart/:id',
     component: Shopcart
   },
   {
@@ -125,17 +78,10 @@ const routes = [
 const router = new VueRouter({
   routes
 })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
+
 const originalPush = VueRouter.prototype.push
    VueRouter.prototype.push = function push(location) {
    return originalPush.call(this, location).catch(err => err)
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
+
 export default router

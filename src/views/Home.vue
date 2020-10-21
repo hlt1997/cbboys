@@ -31,16 +31,6 @@
     <!--商品展示区开始-->
     <div class="commodity">
       <div v-for="(list,index) of lists" :key="index">
-<<<<<<< HEAD
-        <router-link :to="`/details/${list.href}`">
-          <img :src="list.pic" alt="">
-          <p>
-            商品名称：{{list.title}}<br>
-            商品介绍：{{list.details}}<br>
-            价格：￥{{list.price}}
-          </p>
-        </router-link>
-=======
         <router-link :to="list.href"><img :src="list.pic" alt=""></router-link>
         <p>
           <!-- <span>商品名称：{{list.title}}</span><br> -->
@@ -49,7 +39,6 @@
           <span>{{list.price}}</span>
           
         </p>
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
       </div>
     </div>
     <!--商品展示区结束-->
@@ -57,16 +46,11 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
-<<<<<<< HEAD
+
+   
+
     <my-footer></my-footer>
-=======
-<<<<<<< HEAD
-    <my-footer></my-footer>
-=======
-<<<<<<< HEAD
-    <my-footer></my-footer>
-=======
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
+
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -92,12 +76,8 @@
         </mt-tab-item>
       </mt-tabbar>
     </div>
-<<<<<<< HEAD
-=======
     <!--底部导航结束-->
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
+
   </div>
 </template>
 
@@ -220,23 +200,15 @@ export default {
      
     }
   },
-<<<<<<< HEAD
-  mounted(){
-=======
-<<<<<<< HEAD
+
+
+
+
+
+
 
   mounted(){
 
-=======
-<<<<<<< HEAD
-  mounted(){
-
-=======
-
-  mounted(){
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -259,18 +231,7 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
-<<<<<<< HEAD
-    // this.axios.get('/carousel').then(res=>{
-    //   console.log(res.data.results)
-    //   this.carousels = res.data.results
-    // });
-    // this.axios.get('/list').then(res=>{
-    //   console.log(res.data.results);
-    //   this.lists = res.data.results
-    // })
-  },
-=======
-<<<<<<< HEAD
+
        this.axios.get('/carousel').then(res=>{
          console.log(res.data.results)
          this.carousels = res.data.results
@@ -280,45 +241,7 @@ export default {
          this.lists = res.data.results
        })
   },
-
-  // watch:{
-  //   tabbar(value){
-  //     // 跳转到主页
-  //     if(value=='index'){
-  //       this.$router.push('/')
-  //     }if(value=='me'){
-  //     // 跳转到我的页面
-  //       this.$router.push('/me')
-  //     }if(value=='message'){
-  //       // 跳转到消息页面
-  //       this.$router.push('/message')
-  //     }if(value=='shopcart'){
-  //       // 跳转到购物车
-  //       this.$router.push('/shopcart')
-  //     }
-  //   }
-  // },
-
-
-
-
-=======
-    this.axios.get('/carousel').then(res=>{
-      console.log(res.data.results)
-      this.carousels = res.data.results
-    });
-    this.axios.get('/list').then(res=>{
-      console.log(res.data.results);
-      this.lists = res.data.results
-    })
-  },
-<<<<<<< HEAD
-
-=======
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
-  watch:{
+   watch:{
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
@@ -335,18 +258,9 @@ export default {
       }
       }
     }
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-=======
 
-=======
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 90e524f90bf987f60e9c972322b490075b907492
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
-}
->>>>>>> 1a76cc3f7c55594181abe9a48adf9bc80c099c47
+   }
+
+
+
 </script>
