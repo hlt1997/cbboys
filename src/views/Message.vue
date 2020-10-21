@@ -171,8 +171,6 @@
   .options>p:nth-child(3){
     background-color: #F9C810;
   }
-<<<<<<< HEAD
-=======
 
 /*每个聊天信息列表容器 */
   .chat{
@@ -209,7 +207,6 @@
   a.is-selected{
     color: #d4237a !important;
   }
->>>>>>> 24f9fb923a3b44b8640c815a7f8dd3563b80b387
 </style>
 <script>
 import MyFooter from "../components/MyFooter";

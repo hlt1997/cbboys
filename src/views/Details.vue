@@ -27,16 +27,21 @@
         </div>
       </mt-header>
     </header>
-    <div class="swipe">
-      <mt-swipe  :auto="50000">
-        <mt-swipe-item><img src="../../public/img/detail/detail_img1.jpg" alt=""></mt-swipe-item>
-      </mt-swipe>
+    <div class="swipe"> 
+      <mt-swipe :auto="5000">
+        <mt-swipe-item>
+           <img :src="`${info.imagea}`" >
+        </mt-swipe-item>
+        <mt-swipe-item>
+           <img :src="`${info.imageb}`" >
+        </mt-swipe-item>
+      </mt-swipe>    
     </div>
     <!-- 第二栏开始 -->
     <!-- 第二栏设置唯一父元素    -- money-->
     <div class="money">
       <!-- 第二栏商品价格 -->
-      <div class="price">{{info.price}}</div>
+      <div class="price">¥{{info.price}}</div>
       <!-- 第二栏商品标题 -->
       <span class="cotton">{{info.title}}</span>
       <!-- 第二栏商品详情介绍 -->
@@ -70,7 +75,7 @@
           <td>选择</td>
           <td>
             <!-- 颜色分类图片链接 -->
-            <router-link to="/shopcart" class="three-router">
+            <router-link :to="`${info.href}`" class="three-router">
               <span>尺寸 / 颜色分类</span>
               <!-- 四张小图片的样式   - v-for遍历数据库找数据 -->
               <div><img src="../../public/img/detail/detail_img1.jpg" class="three-img">
@@ -140,14 +145,14 @@
         <div>
           <!-- 第一层标签（宝贝介绍） -->
           <div>
-            <span class="four-baby">宝贝评价()</span>
+            <span class="four-baby">宝贝评价(234)</span>
             <router-link to="/" class="four-all">查看全部 > </router-link>
           </div>
           <!-- 各种各样的评价，以及汇总 -->
           <div>
-            <button class="four-button">性价比高()</button>
-            <button class="four-button">质量好()</button>
-            <button class="four-button">很舒适()</button>
+            <button class="four-button">性价比高(899)</button>
+            <button class="four-button">质量好(84)</button>
+            <button class="four-button">很舒适(73)</button>
           
             <div>
               <!-- 某某用户的评价，最近几天的 -->
@@ -166,7 +171,7 @@
         <div>
           <!-- 询问买过的人，以及店家详细信息 -->
           <div>
-            <span class="four-baby">问大家()</span>
+            <span class="four-baby">问大家(1234)</span>
             <router-link to="/" class="four-all">查看全部 ></router-link>
           </div>
           <!-- 问题提问区 -->
@@ -308,7 +313,8 @@
     }
     /* 第二栏价格 */
     .details .price{
-      
+      color: red;
+      font-weight: bold;
       padding: 10px;
     }
     /* 第二栏cb字体 */
@@ -323,6 +329,8 @@
     }
     /* 第二栏详情介绍 */
     .details .recommend{
+      padding: 5px;
+      margin: 5px;
       font-weight: bold;
       font-family: "Microsoft Yahei";
     }
@@ -409,7 +417,7 @@
       background: pink;
       padding: 5px 8px;
       border-radius:15px;
-      margin:10px  40px 10px 0;
+      margin:10px  30px 10px 0;
     }
     /* 第四栏图片 */
     .details .four-img{
@@ -604,15 +612,14 @@ export default {
     // this.$router,路由
     // this.$router,路由请求信息
     // 1.获取地址栏中的ID
-    // let id = this.$router.params.id;
-    console.log(this.$router.param.herf)
-    // 2.向服务器发送请求
-    // this.axios.get('/details?id=' + id).then(res=>{
-    //   let data = res.data.result;
-    //   console.log(data);
-    //   // data.
-    //   // this.info = data;
-    // })
-  }
+    let id = this.$route.params.id;
+    console.log(id);
+     //2.向服务器发送请求
+     this.axios.get('/details?id=' + id).then(res=>{
+       let data = res.data.result;
+       console.log(data);
+      this.info = data;
+     })
+   }
 }
 </script>
