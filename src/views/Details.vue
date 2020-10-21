@@ -36,11 +36,11 @@
     <!-- 第二栏设置唯一父元素    -- money-->
     <div class="money">
       <!-- 第二栏商品价格 -->
-      <div class="price">55</div>
+      <div class="price">{{info.price}}</div>
       <!-- 第二栏商品标题 -->
-      <span class="cotton">棉被</span>
+      <span class="cotton">{{info.title}}</span>
       <!-- 第二栏商品详情介绍 -->
-      <div class="recommend">10斤被子东信棉</div>
+      <div class="recommend">{{info.subtitle}}</div>
       <!-- 第二栏末尾导航栏 -->
       <div class="love">
       <!-- 第二栏末尾推荐导航标志 -->
@@ -70,7 +70,7 @@
           <td>选择</td>
           <td>
             <!-- 颜色分类图片链接 -->
-            <router-link to="/" class="three-router">
+            <router-link to="/shopcart" class="three-router">
               <span>尺寸 / 颜色分类</span>
               <!-- 四张小图片的样式   - v-for遍历数据库找数据 -->
               <div><img src="../../public/img/detail/detail_img1.jpg" class="three-img">
@@ -583,7 +583,7 @@ export default {
      return {
       //  变量downIcon先为true
        downIcon:false,
-       image:[],
+       info:[]
      }
    },
   methods:{
@@ -601,11 +601,18 @@ export default {
     }
   },
   mounted(){
-    this.axios.get('/image').then(res=>{
-      console.log(res.data.result);
-      this.image = res.data.result;
-    });
-    
+    // this.$router,路由
+    // this.$router,路由请求信息
+    // 1.获取地址栏中的ID
+    // let id = this.$router.params.id;
+    console.log(this.$router.param.herf)
+    // 2.向服务器发送请求
+    // this.axios.get('/details?id=' + id).then(res=>{
+    //   let data = res.data.result;
+    //   console.log(data);
+    //   // data.
+    //   // this.info = data;
+    // })
   }
 }
 </script>
