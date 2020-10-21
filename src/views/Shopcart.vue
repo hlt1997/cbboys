@@ -1,6 +1,11 @@
 <template>
   <div class='shopcart'>
-    <mt-header></mt-header>
+    <mt-header>
+      <router-link to="/" slot="left">
+        <mt-button  icon="back" >
+        </mt-button>
+      </router-link>
+    </mt-header>
     <div>
       <router-link to="/site" class='underline'>
         <span class="site">默认</span>
@@ -123,43 +128,16 @@
         </div>
       </div>
       <div class='button'>
-        <button>确定</button>
+        <span>￥{{tatal}}</span>
+        <router-link to="/">
+          <button class="color">确定</button>
+        </router-link>
       </div>
-      <div class='a'></div>
     </div>
   </div>
 </template>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<style>
-
-=======
-<<<<<<< HEAD
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
 <style scoped>
-  html{
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-  }
-
-<<<<<<< HEAD
-<style scoped>
-  
-=======
-<<<<<<< HEAD
-
-
   .shopcart .underline{
-=======
->>>>>>> 1ca86a4fc51be00f8d92669cdb0110a524edc6a1
->>>>>>> c55728ff7a0a32f62e8ad7b1743dbbf3366fc4a0
->>>>>>> fd1a59ce1179017676ffc105a416ad54456f5dc0
->>>>>>> 35acafa93cfc79cbf8ed63ba3d2ef2cb077e960f
-  #shopcart .underline{
->>>>>>> c3def7d8f6e5ca7c2294de8be2db6564ad424643
     text-decoration: none;
     color:#000
   }
@@ -170,34 +148,28 @@
     padding:1px 2px;
     
     border-radius:3px;
-    
   }
-
   .underline span{
     font-size: 10px;
     margin-left:10px;
-    
   }
   .underline div span{
     font-size:16px;
   }
   .underline div{
     margin:3px 0 3px 0;
-
   }
   .underline div img{
     margin-left:170px;
   }
   .color>li{
     float:left;
-    
     margin:15px 10px 0 11px;
     width:30px;
     display:block;
     border:1px solid rgb(221, 64, 64)
   }
   .background{
-    
     margin-top:17px;
     height:600px;
     background:#eee;
@@ -225,7 +197,6 @@
     display: block;
     width:298px;
     height:60px;
-    
     margin:-60px 0 0 65px
   }
   .two-text :nth-child(2) :nth-child(1){
@@ -344,26 +315,35 @@
   }
   .button {
     position: relative;
-    
+    background-color: #fff;
     position: fixed;
     width:100%;
-    top:635px
+    top:620px;
+    position: fixed;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   .button button{
-     border:none;
-    width:90%;
-    margin-left:5%;
+    position: relative;
+    border:none;
+    width:30%;
+    left:45%;
     border-radius:20px;
     height:40px;
     background-color: #f00;
     color:#fff;
     outline:none;
-    position: fixed;
+    top:3px
   }
-  .a{
-    height: 100px;
-    border:1px solid red;
+  .color{
+    color:#fff;
   }
+  .button :nth-child(1){
+    margin-left:5%;
+    
+  }
+  
   
 </style>
 <script>
@@ -380,6 +360,11 @@ export default {
       price:32,
     }
     },
+  mounted(){
+    this.axios.get('/shopcart').then(res=>{
+      
+    })
+  },
   methods:{
     minus(){
       if(this.n>0){

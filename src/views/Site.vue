@@ -47,9 +47,4 @@
     outline:none;
     
   }
- 
-    
-    
- 
- 
 </style>
