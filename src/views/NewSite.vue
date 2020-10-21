@@ -14,7 +14,7 @@
         <tr>
           <td>收货人</td>
           <td>
-            <input type="text" placeholder="姓名" v-model="shopname" @blur.native.capture='checkShopName'>
+            <input type="text" placeholder="姓名" v-model="shopname" @blur='checkShopName'>
           </td>
         </tr>
         <tr>
@@ -23,7 +23,7 @@
             <select name="" id="">
               <option value="">+86</option>
             </select>
-            <input type="text" placeholder="手机号码" v-model="shopphone" @blur.native.capture='checkShopPhone'>
+            <input type="text" placeholder="手机号码" v-model="shopphone" @blur='checkShopPhone'>
           </td>
         </tr>
         <tr>
@@ -51,6 +51,7 @@
 <style  scoped>
  .newsite :nth-child(2){
    text-align:center;
+   margin-top:5px
   }
   .newsite input {
     border: none;
@@ -104,12 +105,13 @@ export default {
     }
   },
   methods:{
-    // // checkShopName(){
-    //   let shopnameRegExp=/^[\d\w]{1,20}$/;
-    //   if(this.shopnameRegExp.test(this.shopname)){
-    //     this
-    //   }
-    // }
+    checkShopName(){
+      let shopnameRegExp=/^[\d\w\u4e00-\u9fa5]{1,20}$/;
+      
+    },
+    checkShopPhone(){
+      
+    }
   }
 }
 </script>

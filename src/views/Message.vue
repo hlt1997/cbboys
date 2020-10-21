@@ -130,6 +130,7 @@
     background-color: #F9C810;
   }
 
+
 /*每个聊天信息列表容器 */
   .chat{
     margin-bottom: 60px;
@@ -165,6 +166,7 @@
   a.is-selected{
     color: #d4237a !important;
   }
+
 </style>
 <script>
 import MyFooter from "../components/MyFooter";
