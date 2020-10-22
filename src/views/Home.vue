@@ -46,19 +46,11 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
-<<<<<<< HEAD
-    <my-footer></my-footer>
 
-=======
-<<<<<<< HEAD
-=======
-
-   
 
     <my-footer></my-footer>
 
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
->>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
+
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -85,14 +77,8 @@
       </mt-tabbar>
     </div>
     <!--底部导航结束-->
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
->>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
   </div>
 </template>
 
@@ -219,15 +205,7 @@ export default {
      
     }
   },
-<<<<<<< HEAD
 
-
-  mounted(){
-
-=======
-<<<<<<< HEAD
-  mounted(){
-=======
 
 
 
@@ -237,8 +215,6 @@ export default {
 
   mounted(){
 
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
->>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -261,9 +237,7 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
     this.axios.get('/carousel').then(res=>{
       this.carousels = res.data.results
     });
@@ -272,44 +246,7 @@ export default {
     })
   },
  
-  watch:{
-=======
->>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
-
-       this.axios.get('/carousel').then(res=>{
-         console.log(res.data.results)
-         this.carousels = res.data.results
-       });
-       this.axios.get('/list').then(res=>{
-         console.log(res.data.results);
-         this.lists = res.data.results
-       })
-  },
-<<<<<<< HEAD
-
-  // watch:{
-  //   tabbar(value){
-  //     // 跳转到主页
-  //     if(value=='index'){
-  //       this.$router.push('/')
-  //     }if(value=='me'){
-  //     // 跳转到我的页面
-  //       this.$router.push('/me')
-  //     }if(value=='message'){
-  //       // 跳转到消息页面
-  //       this.$router.push('/message')
-  //     }if(value=='shopcart'){
-  //       // 跳转到购物车
-  //       this.$router.push('/shopcart')
-  //     }
-  //   }
-  // },
-
-  watch:{
-=======
    watch:{
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
->>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
@@ -323,21 +260,12 @@ export default {
       }if(value=='shopcart'){
         // 跳转到购物车
         this.$router.push('/shopcart').catch(e=>{})
-      }
+       }
       }
     }
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
   }
-}
-=======
-
-   }
 
 
 
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
+   
 </script>

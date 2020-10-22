@@ -150,7 +150,7 @@
           </div>
           <!-- 各种各样的评价，以及汇总 -->
           <div>
-            <button class="four-button">性价比高(899)</button>
+            <button class="four-button">性价比高(99)</button>
             <button class="four-button">质量好(84)</button>
             <button class="four-button">很舒适(73)</button>
           
@@ -417,7 +417,7 @@
       background: pink;
       padding: 5px 8px;
       border-radius:15px;
-      margin:10px  30px 10px 0;
+      margin:10px  20px 10px 0;
     }
     /* 第四栏图片 */
     .details .four-img{
@@ -521,7 +521,8 @@
     /* 底部信息表格背景样式 */
     .details .products-table{
       background: #FFF;
-      padding: 10px;
+      padding: 5px;
+      margin-bottom:100px ;
     }
     /* 底部固定导航栏 */
     .details .last-ul{
@@ -535,7 +536,7 @@
     /* li 下的 ul 文字中的样式，以及对齐方式 */
     .details .last-down>.last-ul>li>ul{
       text-align: center;
-      padding: 3px 5px;
+     
       font-size: 12px;
     }
     /* 每个最小--li--之间的距离 */
@@ -547,10 +548,10 @@
       background-color: #fff;
       position: fixed;
       bottom: 0;
-   
+      width: 375px;
     }
     .details .last-down>.last-ul>li{
-      margin: 0 10px;
+      margin: 0 10px; 
     }
     /* 底部导航栏---收藏---宽度设置 */
     .details .last-ul-div{
@@ -582,6 +583,10 @@
       border-bottom-right-radius:15px;
       background:linear-gradient(to right ,#f30 , #f00 );
       padding:5px 17px;
+    }
+    .details .last-down ul{
+      list-style: none;
+      padding-left:0 ;
     }
 </style>
 
