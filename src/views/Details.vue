@@ -30,10 +30,10 @@
     <div class="swipe"> 
       <mt-swipe :auto="5000">
         <mt-swipe-item>
-           <img :src="`${info.imagea}`" >
+           <img v-lazy="info.imagea" >
         </mt-swipe-item>
         <mt-swipe-item>
-           <img :src="`${info.imageb}`" >
+           <img v-lazy="info.imageb" >
         </mt-swipe-item>
       </mt-swipe>    
     </div>
@@ -78,7 +78,11 @@
             <router-link :to="`${info.href}`" class="three-router">
               <span>尺寸 / 颜色分类</span>
               <!-- 四张小图片的样式   - v-for遍历数据库找数据 -->
-              <div><img src="../../public/img/detail/detail_img1.jpg" class="three-img">
+              <div>
+                <img v-lazy="info.imagec" class="three-img">
+                <img v-lazy="info.imaged" class="three-img">
+                <img v-lazy="info.imagee" class="three-img">
+                <img v-lazy="info.imagef" class="three-img">
               <!-- 末尾尖括号图片 -->
               <img src="../../public/img/details-image/大于号.png" class="three-image">
               </div>
@@ -161,7 +165,10 @@
               <div class="four-product">暗室逢灯卡时间划分空间按时付款就好撒空间发件爱神的箭返回尽快发货</div>
               <!-- 用户上传的照片 -->
               <div class="four-img-fu">
-                <img src="../../public/img/detail/detail_img1.jpg" class="four-img">
+                <img v-lazy="info.imagec" class="four-img">
+                <img v-lazy="info.imaged" class="four-img">
+                <img v-lazy="info.imagee" class="four-img">
+                <img v-lazy="info.imagef" class="four-img">
               </div>
             </div>
           
@@ -194,7 +201,10 @@
       </div>
     </div>
     <div class="products">
-      <img src="../../public/img/detail/detail_img11.jpg" class="products-img">
+      <img v-lazy="info.imagec" class="products-img">
+      <img v-lazy="info.imaged" class="products-img">
+      <img v-lazy="info.imagee" class="products-img">
+      <img v-lazy="info.imagef" class="products-img">
       <!-- 底部详情页信息 -->
       <div class="products-table">
         <table>
@@ -352,6 +362,7 @@
     .details .three-img{
       width: 30px;
       margin-top: 10px;
+      margin-left: 10px;
     }
     /* 第三栏导航栏的整体结构 */
     .details .three{
@@ -455,6 +466,8 @@
     .details .good-baby{
       display: flex;
       align-items: center;
+      margin: 0 10px;
+      border-radius:5px ;
     }
     /* 公益图片样式 */
     .details .good-baby-img{
@@ -527,7 +540,7 @@
     /* 底部固定导航栏 */
     .details .last-ul{
       display: flex;
-      justify-content: space-around;
+      /* justify-content: space-around; */
     }
     /* 底部导航栏图片的样式 */
     .details .last-img{
@@ -596,7 +609,8 @@ export default {
      return {
       //  变量downIcon先为true
        downIcon:false,
-       info:[]
+       info:[],
+       tu:[]
      }
    },
   methods:{
@@ -622,7 +636,13 @@ export default {
      //2.向服务器发送请求
      this.axios.get('/details?id=' + id).then(res=>{
        let data = res.data.result;
-       console.log(data);
+      //  console.log(data);
+      data.imagea = require('../../public/img/detail/' + data.imagea);
+      data.imageb = require('../../public/img/detail/' + data.imageb);
+      data.imagec = require('../../public/img/detail/' + data.imagec);
+      data.imaged = require('../../public/img/detail/' + data.imaged);
+      data.imagee = require('../../public/img/detail/' + data.imagee);
+      data.imagef = require('../../public/img/detail/' + data.imagef);
       this.info = data;
      })
    }
