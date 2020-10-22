@@ -4,7 +4,7 @@
     <mt-header title="账号注册" class="header"></mt-header>
     <!--顶部结束-->
     <div>
-      <img src="../../public/img/index/index_01.jpg" alt="">
+      <img src="../../public/img/me/login.png" alt="">
       <!-- 账户信息开始 -->
       <mt-field 
         type="text"
@@ -13,7 +13,8 @@
         :attr="{maxlength:20}"
         v-model="username" 
         :state="NameStatus"
-        @blur.native.capture="handle1"> 
+        @blur.native.capture="handle1"
+        class="input"> 
       </mt-field>
       <mt-field 
         type="password"
@@ -22,7 +23,8 @@
         :attr="{maxlength:20,autocomplete:'off'}"
         v-model="password"
         :state="pwdStatus"
-        @blur.native.capture="handle2"> 
+        @blur.native.capture="handle2"
+        class="input"> 
       </mt-field>
       <mt-field 
         type="password"
@@ -31,7 +33,8 @@
         :attr="{maxlength:20,autocomplete:'off'}"
         v-model="conpassword"
         :state="conpwdStatus"
-        @blur.native.capture="handle3"> 
+        @blur.native.capture="handle3"
+        class="input"> 
       </mt-field>
       <!-- 账户信息结束 -->
       <!-- 登录注册按钮开始 -->
@@ -73,6 +76,9 @@
     img{
       display:block;
       margin:auto;
+    }
+    .input{
+      margin-bottom: 10px;
     }
 </style>
 <script>

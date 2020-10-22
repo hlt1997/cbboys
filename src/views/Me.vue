@@ -3,10 +3,16 @@
     <!-- 登录界面 -->
       <!-- 顶部用户界面开始 -->
       <div id="header">
-        <div class="shortcut"> 
+        <div class="shortcut" v-if="this.$store.state.isLogined == 0"> 
           <router-link to="/login">
           <img src="../../public/img/me/me.png" >
           <span class="left-margin">登录体验更多精彩</span>
+          </router-link>
+        </div>
+        <div class="shortcut" v-else> 
+          <router-link to="/">
+          <img src="../../public/img/me/me.png" >
+          <span class="left-margin">{{this.$store.state.username}}</span>
           </router-link>
         </div>
      </div> 
@@ -47,7 +53,7 @@
           <li><img src="../../public/img/me/activity.png" alt="">最新活动</li>
           <li><img src="../../public/img/me/site.png" alt="">地址管理</li>
           <li><img src="../../public/img/me/service.png" alt="">客服热线</li>
-          <router-link to="/"><li><img src="../../public/img/me/logoff.png" alt="">退出登录</li></router-link>
+          <button @click="logout"><li><img src="../../public/img/me/logoff.png" alt="">退出登录</li></button>
         </ul>
     </div>
     <!-- 表单区域结束 -->
@@ -84,7 +90,8 @@
  /* 个人信息背景 */
   #header{
     height: 150px;
-    background-color: aqua;
+    background: url(../../public/img/me/bg.png) no-repeat;
+    background-size: cover;
     position:relative;
   }
   /* 个人信息文字*/
@@ -139,12 +146,14 @@
     margin-top: 10px;
   } 
   /* 表单下每个li的样式 */
-  .Sheet li{
+  .Sheet li,ul button{
+    border: none;
+    text-align: left;
     height: 50px;
     background: #fff;
     width: 100%;
   }
-  .Sheet img{
+  .Sheet img,button img{
     margin-top: 6px;
   }
   /* 全部订单下的外边距 */
@@ -160,10 +169,17 @@
     width: 34px;
     margin:2px;
     margin-right: 13px;
+    margin-left: 7px;
   }
   li img{
+    margin-left: 5px;
     width: 38px;
     margin-right: 12px;
+  }
+  button img{
+    width: 35px;
+    margin-left: 0px;
+    margin-right: 15px;
   }
 
 
@@ -197,6 +213,11 @@ export default {
         this.$router.push('/shopcart')
       }
     }
-  }
+  },
+  methods:{
+    logout(){
+      this.$store.commit('logout');
+    }
+  },
 }
 </script>
