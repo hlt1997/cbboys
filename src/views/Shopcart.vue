@@ -1,6 +1,11 @@
 <template>
   <div class='shopcart'>
-    <mt-header></mt-header>
+    <mt-header>
+      <router-link to="/" slot="left">
+        <mt-button  icon="back" >
+        </mt-button>
+      </router-link>
+    </mt-header>
     <div>
       <router-link to="/site" class='underline'>
         <span class="site">默认</span>
@@ -123,23 +128,33 @@
         </div>
       </div>
       <div class='button'>
-        <button>确定</button>
+        <span>￥{{tatal}}</span>
+        <router-link to="/">
+          <button class="color">确定</button>
+        </router-link>
       </div>
-      <div class='a'></div>
     </div>
   </div>
 </template>
 <style scoped>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
   html{
     width: 100%;
     overflow: hidden;
     margin: 0;
   }
+<<<<<<< HEAD
 
   #shopcart .underline{
 
 
+=======
+  #shopcart .underline{
+
+>>>>>>> 2528dc4e3eb170a0c768472164af2c2d6e256602
     text-decoration: none;
     color:#000
   }
@@ -150,34 +165,28 @@
     padding:1px 2px;
     
     border-radius:3px;
-    
   }
-
   .underline span{
     font-size: 10px;
     margin-left:10px;
-    
   }
   .underline div span{
     font-size:16px;
   }
   .underline div{
     margin:3px 0 3px 0;
-
   }
   .underline div img{
     margin-left:170px;
   }
   .color>li{
     float:left;
-    
     margin:15px 10px 0 11px;
     width:30px;
     display:block;
     border:1px solid rgb(221, 64, 64)
   }
   .background{
-    
     margin-top:17px;
     height:600px;
     background:#eee;
@@ -205,7 +214,6 @@
     display: block;
     width:298px;
     height:60px;
-    
     margin:-60px 0 0 65px
   }
   .two-text :nth-child(2) :nth-child(1){
@@ -324,33 +332,38 @@
   }
   .button {
     position: relative;
-    
+    background-color: #fff;
     position: fixed;
     width:100%;
-    top:635px
+    top:620px;
+    position: fixed;
+    height: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
   .button button{
-     border:none;
-    width:90%;
-    margin-left:5%;
+    position: relative;
+    border:none;
+    width:30%;
+    left:45%;
     border-radius:20px;
     height:40px;
     background-color: #f00;
     color:#fff;
     outline:none;
-    position: fixed;
+    top:3px
   }
-  .a{
-    height: 100px;
-    border:1px solid red;
+  .color{
+    color:#fff;
   }
-  
+  .button :nth-child(1){
+    margin-left:5%;
+    
+  }
 </style>
 <script>
-
 // import "../../public/shopcart.css"
 export default {
-  
   data(){
     return{
       n:0,
@@ -358,8 +371,21 @@ export default {
       display:'false',
       tatal:0,
       price:32,
+      shopcart:''
     }
-    },
+  },
+ mounted(){
+   //先接受地址栏中传来的id数据
+   let id=this.$route.params.id;
+   console.log(id);
+   //向服务器发送请求
+   this.axios.get('/shopcart?id='+id).then((res)=>{
+     data=res.data.result;
+     console.log(data)
+   })
+ },
+   
+ 
   methods:{
     minus(){
       if(this.n>0){
