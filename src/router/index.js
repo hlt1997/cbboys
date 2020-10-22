@@ -7,10 +7,18 @@ import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 import Site from '../views/Site'
 import Details from '../views/Details'
 import NewSite from '../views/NewSite'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,11 +31,15 @@ const routes = [
     component: Site
   },
   {
-    path:'/details',
+    path:'/details/:id',
     component:Details
   },
   {
+<<<<<<< HEAD
     path: '/shopcart',
+=======
+    path: '/shopcart/:id',
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
     component: Shopcart
   },
   {
@@ -64,10 +76,20 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 const originalPush = VueRouter.prototype.push
    VueRouter.prototype.push = function push(location) {
    return originalPush.call(this, location).catch(err => err)
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 export default router

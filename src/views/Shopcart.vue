@@ -137,12 +137,18 @@
   </div>
 </template>
 <style scoped>
+<<<<<<< HEAD
   html{
     width: 100%;
     overflow: hidden;
     margin: 0;
   }
   #shopcart .underline{
+=======
+ 
+  #shopcart .underline{
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
     text-decoration: none;
     color:#000
   }
@@ -348,14 +354,10 @@
     margin-left:5%;
     
   }
-  
-  
 </style>
 <script>
-
 // import "../../public/shopcart.css"
 export default {
-  
   data(){
     return{
       n:0,
@@ -363,13 +365,21 @@ export default {
       display:'false',
       tatal:0,
       price:32,
+      shopcart:''
     }
-    },
-  mounted(){
-    this.axios.get('/shopcart').then(res=>{
-      
-    })
   },
+ mounted(){
+   //先接受地址栏中传来的id数据
+   let id=this.$route.params.id;
+   console.log(id);
+   //向服务器发送请求
+   this.axios.get('/shopcart?id='+id).then((res)=>{
+     data=res.data.result;
+     console.log(data)
+   })
+ },
+   
+ 
   methods:{
     minus(){
       if(this.n>0){

@@ -46,6 +46,14 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
+<<<<<<< HEAD
+=======
+
+
+    <my-footer></my-footer>
+
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -72,19 +80,28 @@
       </mt-tabbar>
     </div>
     <!--底部导航结束-->
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
   </div>
 </template>
 
 <style scoped>
 /* 轮播图容器*/
   .swipe{
+    margin: auto;
     margin-top: 60px;
-    height: 150px;
+    height: 180px;
   }
 /* 轮播图下的图片*/
 
   .swipe img{
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
   }
 /* 品牌容器*/
 
@@ -124,7 +141,7 @@
   }
   /* 每个偶数商品加左外边距*/
   .commodity div:nth-child(even){
-    margin-left: 10px;
+    margin-left: 10px; 
   }
   /*每个商品容器 */
   .commodity>div{
@@ -194,8 +211,21 @@ export default {
      
     }
   },
+<<<<<<< HEAD
 
   mounted(){
+=======
+
+
+
+
+
+
+
+
+  mounted(){
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -218,6 +248,7 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
+<<<<<<< HEAD
     this.axios.get('/carousel').then(res=>{
          console.log(res.data.results)
          this.carousels = res.data.results
@@ -228,6 +259,18 @@ export default {
       //  })
   },
   watch:{
+=======
+
+    this.axios.get('/carousel').then(res=>{
+      this.carousels = res.data.results
+    });
+    this.axios.get('/list').then(res=>{
+      this.lists = res.data.results
+    })
+  },
+ 
+   watch:{
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
@@ -241,9 +284,15 @@ export default {
       }if(value=='shopcart'){
         // 跳转到购物车
         this.$router.push('/shopcart').catch(e=>{})
-      }
+       }
       }
     }
   }
 
+<<<<<<< HEAD
+=======
+
+
+   
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 </script>
