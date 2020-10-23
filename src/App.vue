@@ -2,12 +2,6 @@
   <div id="app">
     <router-view/>
   </div>
-<<<<<<< HEAD
-=======
-
-</template>
-
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
 
 
 </template>
@@ -23,8 +17,4 @@
 
 </style>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
 

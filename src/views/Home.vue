@@ -46,14 +46,6 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
-<<<<<<< HEAD
-=======
-
-   
-
-    <my-footer></my-footer>
-
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -62,9 +54,9 @@
           <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
           <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
         </mt-tab-item>
-        <mt-tab-item id="shopcart">
+        <mt-tab-item id="shop">
           购物车
-          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
+          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shop'">
           <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
         </mt-tab-item>
         <mt-tab-item id="message">
@@ -80,10 +72,6 @@
       </mt-tabbar>
     </div>
     <!--底部导航结束-->
-<<<<<<< HEAD
-=======
-
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
   </div>
 </template>
 
@@ -92,7 +80,7 @@
   .swipe{
     margin: auto;
     margin-top: 60px;
-    height: 180px;
+    height: 150px;
   }
 /* 轮播图下的图片*/
 
@@ -189,14 +177,12 @@
   }
 </style>
 <script>
-// 引入底部导航组件
-import MyFooter from "../components/MyFooter";
-
+// 引入顶部搜索框组件
 import Search from "../components/Search";
 
 export default {
   components:{
-    MyFooter,Search
+    Search
   },
   data(){
     return{
@@ -210,19 +196,7 @@ export default {
      
     }
   },
-<<<<<<< HEAD
   mounted(){
-=======
-
-
-
-
-
-
-
-  mounted(){
-
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -245,7 +219,6 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
-<<<<<<< HEAD
     this.axios.get('/carousel').then(res=>{
       this.carousels = res.data.results
     });
@@ -253,21 +226,8 @@ export default {
       this.lists = res.data.results
     })
   },
- 
+ // 监听导航栏底部的变化
   watch:{
-=======
-
-       this.axios.get('/carousel').then(res=>{
-         console.log(res.data.results)
-         this.carousels = res.data.results
-       });
-       this.axios.get('/list').then(res=>{
-         console.log(res.data.results);
-         this.lists = res.data.results
-       })
-  },
-   watch:{
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
@@ -278,20 +238,11 @@ export default {
       }if(value=='message'){
         // 跳转到消息页面
         this.$router.push('/message').catch(e=>{})
-      }if(value=='shopcart'){
+      }if(value=='shop'){
         // 跳转到购物车
-        this.$router.push('/shopcart').catch(e=>{})
-      }
+        this.$router.push('/shop').catch(e=>{})
       }
     }
-<<<<<<< HEAD
   }
 }
-=======
-
-   }
-
-
-
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
 </script>
