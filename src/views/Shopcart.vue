@@ -36,12 +36,12 @@
         <img src="../../public/img/bottom-img/share.png" alt="">
         <span>这里需要数据</span>
         <div class='two-text'>
-          <img src="../../public/img/carousel/banner4.jpg" alt="">
+          <img :src="info[0].imagea" alt="">
           <div>
-            <div>这里需要数据，省略号</div>
+            <div>{{info[0].title}}</div>
             <span>颜色 需要数据</span>
             <div class="amount">
-              <span>￥{{}}</span>
+              <span>￥{{info[0].uprice}}</span>
               <p>
                 <span @click="minus()">-</span>
                 <span>{{n}}</span>
@@ -55,7 +55,7 @@
             <span>配送</span>
             <div>
               快递运输
-              <img src="../../public/img/bottom-img/dayuhao.png" alt="">
+              <img :src="info.imageb" alt="">
             </div>
             <p>工作日、双休日与节假日均可送货</p>
           </router-link>
@@ -65,7 +65,7 @@
             <div>
               商家赠送
             </div>
-            <p class="chan-mar">享运费补贴或免费取件服务</p>
+            <p class="chan-mar">{{info[0].promise}}</p>
         </div>  
         <div class='delivery-mar'>
           <span>留言</span>
@@ -76,7 +76,7 @@
         <table></table>
         <div>
           <span>商品金额</span>
-          <p>￥{{price}}</p>
+          <p>￥{{info[0].uprice}}</p>
         </div>
         <div>
           <span>退还无忧</span>
@@ -93,11 +93,11 @@
           </p>
         </div>
         <div>
-          <span>京豆</span>
-          <p>共52，满1000可用</p>
+          <span>積分</span>
+          <p>{{info[0].subtitle}}</p>
         </div>
         <div>
-          <span>礼品卡(京东卡/E卡)</span>
+          <span>礼品卡</span>
           <p>无可用
             <img src="../../public/img/bottom-img/dayuhao.png" alt="">
           </p>
@@ -137,11 +137,7 @@
   </div>
 </template>
 <style scoped>
-  html{
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-  }
+ 
   #shopcart .underline{
 
     text-decoration: none;
@@ -197,13 +193,20 @@
   }
   .two :nth-child(3) img{
     width:60px;
-    margin-top:10px
+     margin-top:-50px;
   }
   .two :nth-child(3)>div{
     display: block;
     width:298px;
     height:60px;
     margin:-60px 0 0 65px
+  }
+  .two-text{
+    margin:60px 0 0 0 
+  }
+  .two-text img{
+    width: 60px;
+    margin-top:-40px
   }
   .two-text :nth-child(2) :nth-child(1){
     margin-bottom:4px;
@@ -229,6 +232,7 @@
   .delivery :nth-child(2){
     margin:-13px 0 0 270px
   }
+  
   /* 设置“配送”行的右侧箭头 */
   .delivery :nth-child(2) img{
     width: 12px;
@@ -271,7 +275,8 @@
     padding-left:10px
   }
   .three>div :nth-child(2){
-    margin:-13px 0 0 280px
+    margin:-13px 0 0 280px;
+    width:110px
   }
   .three :nth-child(5) img{
     width:12px
@@ -334,7 +339,7 @@
     position: relative;
     border:none;
     width:30%;
-    left:45%;
+    right:-35%;
     border-radius:20px;
     height:40px;
     background-color: #f00;
@@ -359,8 +364,9 @@ export default {
       mon:'',
       display:'false',
       tatal:0,
-      price:32,
-      shopcart:''
+      shopcart:'',
+      info:{},
+      
     }
   },
  mounted(){
@@ -369,25 +375,25 @@ export default {
    console.log(id);
    //向服务器发送请求
    this.axios.get('/shopcart?id='+id).then((res)=>{
-     data=res.data.result;
-     console.log(data)
+     let data=res.data.result;
+     console.log(data);
+     this.info=res.data.result;
+     console.log(this.info)
    })
  },
-   
- 
   methods:{
     minus(){
       if(this.n>0){
         this.n--;
         
-        this.tatal=this.n*this.price
+        this.tatal=paserInt(this.n*this.info[0].uprice).toFixed(2)
       }
     },
     add(){
       this.n++;
-      this.tatal=this.n*this.price
+      
+      this.tatal=this.n*this.info[0].uprice
     },
-    
   }
 }
 

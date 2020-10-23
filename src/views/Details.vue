@@ -607,12 +607,12 @@ export default {
     // let id = this.$router.params.id;
     console.log(this.$router.param.herf)
     // 2.向服务器发送请求
-    // this.axios.get('/details?id=' + id).then(res=>{
-    //   let data = res.data.result;
-    //   console.log(data);
-    //   // data.
-    //   // this.info = data;
-    // })
+     this.axios.get('/details?id=' + id).then(res=>{
+       let data = res.data.result;
+       console.log(data);
+        data.
+        this.info = data;
+     })
   }
 }
 </script>

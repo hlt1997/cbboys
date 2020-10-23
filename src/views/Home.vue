@@ -46,14 +46,11 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
-<<<<<<< HEAD
-=======
 
    
 
     <my-footer></my-footer>
 
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -80,10 +77,6 @@
       </mt-tabbar>
     </div>
     <!--底部导航结束-->
-<<<<<<< HEAD
-=======
-
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
   </div>
 </template>
 
@@ -210,19 +203,8 @@ export default {
      
     }
   },
-<<<<<<< HEAD
-  mounted(){
-=======
-
-
-
-
-
-
-
   mounted(){
 
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -245,17 +227,6 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
-<<<<<<< HEAD
-    this.axios.get('/carousel').then(res=>{
-      this.carousels = res.data.results
-    });
-    this.axios.get('/list').then(res=>{
-      this.lists = res.data.results
-    })
-  },
- 
-  watch:{
-=======
 
        this.axios.get('/carousel').then(res=>{
          console.log(res.data.results)
@@ -267,7 +238,6 @@ export default {
        })
   },
    watch:{
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
@@ -284,14 +254,9 @@ export default {
       }
       }
     }
-<<<<<<< HEAD
-  }
-}
-=======
 
    }
 
 
 
->>>>>>> 5cb9dc4cbdd20b162066dc57d0d338e299bee3bb
 </script>
