@@ -14,17 +14,41 @@ import Shop from '../views/Shop'
 
 
 
+=======
+<<<<<<< HEAD
 
 
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
     path: '/shop',
     component: Shop
   },
   {
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
     path: '/newsite',
     component: NewSite
   },
@@ -38,6 +62,16 @@ const routes = [
   },
   {
     path: '/shopcart/:id',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
     component: Shopcart
   },
   {

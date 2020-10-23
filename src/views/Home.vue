@@ -46,6 +46,26 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+
+
+    <my-footer></my-footer>
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -72,6 +92,20 @@
       </mt-tabbar>
     </div>
     <!--底部导航结束-->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
   </div>
 </template>
 
@@ -200,9 +234,34 @@ export default {
      
     }
   },
+<<<<<<< HEAD
 
 
   mounted(){
+=======
+  mounted(){
+<<<<<<< HEAD
+
+=======
+=======
+<<<<<<< HEAD
+
+  mounted(){
+=======
+
+
+
+
+
+
+
+
+  mounted(){
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -225,6 +284,19 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
+<<<<<<< HEAD
+
+       this.axios.get('/carousel').then(res=>{
+         console.log(res.data.results)
+         this.carousels = res.data.results
+       });
+       this.axios.get('/list').then(res=>{
+         console.log(res.data.results);
+         this.lists = res.data.results
+       })
+  },
+   watch:{
+=======
     this.axios.get('/carousel').then(res=>{
          console.log(res.data.results)
          this.carousels = res.data.results
@@ -236,6 +308,15 @@ export default {
   },
  // 监听导航栏底部的变化
   watch:{
+<<<<<<< HEAD
+=======
+=======
+ 
+   watch:{
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
@@ -251,7 +332,30 @@ export default {
         this.$router.push('/shop').catch(e=>{})
       }
     }
+<<<<<<< HEAD
+=======
   }
 }
+<<<<<<< HEAD
 
+=======
+=======
+        this.$router.push('/shopcart').catch(e=>{})
+       }
+      }
+    }
+  }
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+
+<<<<<<< HEAD
+=======
+
+
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
 </script>

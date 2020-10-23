@@ -36,7 +36,11 @@
         <img src="../../public/img/bottom-img/share.png" alt="">
         <span>这里需要数据</span>
         <div class='two-text'>
+<<<<<<< HEAD
           <img src="../../public/img/detail/detail_img1.jpg" alt="">
+=======
+          <img :src="info[0].imagea" alt="">
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
           <div>
             <div>{{info[0].title}}</div>
             <span>颜色 需要数据</span>
@@ -93,7 +97,11 @@
           </p>
         </div>
         <div>
+<<<<<<< HEAD
           <span>积分</span>
+=======
+          <span>積分</span>
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
           <p>{{info[0].subtitle}}</p>
         </div>
         <div>
@@ -137,8 +145,25 @@
   </div>
 </template>
 <style scoped>
+<<<<<<< HEAD
  #shopcart .underline{
 
+=======
+<<<<<<< HEAD
+ 
+=======
+<<<<<<< HEAD
+  html{
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+  }
+>>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+  #shopcart .underline{
+=======
+ 
+  #shopcart .underline{
+>>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
 
     text-decoration: none;
     color:#000
