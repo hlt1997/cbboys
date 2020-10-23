@@ -137,13 +137,18 @@
   </div>
 </template>
 <style scoped>
+<<<<<<< HEAD
   html{
     width: 100%;
     overflow: hidden;
     margin: 0;
   }
   #shopcart .underline{
+=======
+ 
+  #shopcart .underline{
 
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
     text-decoration: none;
     color:#000
   }

@@ -6,41 +6,59 @@ import Shopcart from '../views/Shopcart'
 import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
 
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 import Site from '../views/Site'
 import Details from '../views/Details'
 import NewSite from '../views/NewSite'
 import Shop from '../views/Shop'
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
 Vue.use(VueRouter)
 
 const routes = [
   {
+<<<<<<< HEAD
     path: '/shop',
     component: Shop
   },
   {
+=======
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
     path: '/newsite',
     component: NewSite
   },
   {
-
     path: '/site',
-
     component: Site
   },
   {
-    path:'/details',
+    path:'/details/:id',
     component:Details
   },
   {
     path: '/shopcart/:id',
+<<<<<<< HEAD
+=======
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
     component: Shopcart
   },
   {
@@ -77,12 +95,20 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 })
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 const originalPush = VueRouter.prototype.push
    VueRouter.prototype.push = function push(location) {
    return originalPush.call(this, location).catch(err => err)
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
 export default router

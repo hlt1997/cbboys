@@ -10,7 +10,7 @@
     </header>
      <!-- 顶部结束 -->
   <div class="margin">
-    <img src="../../public/img/index/index_01.jpg" alt="">
+    <img src="../../public/img/me/login.png" alt="">
   </div>
   <!-- 账户信息开始 -->
   <div class="margin">
@@ -21,7 +21,8 @@
         :attr="{maxleng:20}"
         v-model="username"
         :state="NameStatus"
-        @blur.native.capture="handle1">
+        @blur.native.capture="handle1"
+        class="input">
     </mt-field>
     <mt-field 
         type="password" 
@@ -30,7 +31,8 @@
         :attr="{maxleng:20,autocomplete:'off'}"
         v-model="password"
         :state="upwdStatus"
-        @blur.native.capture="handle2">
+        @blur.native.capture="handle2"
+        class="input">
     </mt-field>
     <!-- 账户信息结束 -->
    <div>    
@@ -75,6 +77,9 @@
         font:16px "Microsoft yahei";
         color: #FFF;
         border-radius: 20px;
+    }
+    .input{
+      margin-bottom: 10px;
     }
 </style>
 <script>
@@ -132,18 +137,23 @@ export default {
       // 点击登录执行的事件函数
       if(this.handle1()&&this.handle2()){
         let obj = {
-          username:this.username,
+           username:this.username,
           password:this.password
         }
-        this.axios.post('/login',this.qs.stringify(obj)).then(res=>{
-          // 如果用户登录成功跳转到主页
-          if(res.data.code==1){
-            this.$router.push('/')
-            // 否则弹出错误提示
-          }else{
-            this.$messagebox('登录提示','用户名或密码错误')
-          }
-        }) 
+        // 派遣Actions
+        this.$store.dispatch('login',obj)
+        // this.axios.post('/login',this.qs.stringify(obj)).then(res=>{
+        //   // 如果用户登录成功跳转到主页
+        //   if(res.data.code==1){
+        //     //提交Mutations
+        //     this.$store.commit('logined');
+        //     localStorage.setItem('isLogined','1');
+        //     this.$router.push('/')
+        //     // 否则弹出错误提示
+        //   }else{
+        //     this.$messagebox('登录提示','用户名或密码错误');
+        //   }
+        // }) 
       }
     }
   }

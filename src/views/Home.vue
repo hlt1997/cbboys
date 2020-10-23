@@ -46,6 +46,17 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+    <my-footer></my-footer>
+
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
     <!--底部导航开始-->
     <div class="nav">
       <mt-tabbar v-model='tabbar' fixed>
@@ -72,6 +83,14 @@
       </mt-tabbar>
     </div>
     <!--底部导航结束-->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
   </div>
 </template>
 
@@ -196,7 +215,25 @@ export default {
      
     }
   },
+<<<<<<< HEAD
   mounted(){
+=======
+<<<<<<< HEAD
+
+  mounted(){
+=======
+
+
+
+
+
+
+
+
+  mounted(){
+
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -220,14 +257,32 @@ export default {
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
     this.axios.get('/carousel').then(res=>{
+         console.log(res.data.results)
+         this.carousels = res.data.results
+       });
+      //  this.axios.get('/list').then(res=>{
+      //    console.log(res.data.results);
+      //    this.lists = res.data.results
+      //  })
+  },
+  watch:{
+=======
+
+    this.axios.get('/carousel').then(res=>{
       this.carousels = res.data.results
     });
     this.axios.get('/list').then(res=>{
       this.lists = res.data.results
     })
   },
+<<<<<<< HEAD
  // 监听导航栏底部的变化
   watch:{
+=======
+ 
+   watch:{
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
     tabbar(value){
       // 跳转到主页
       if(value=='index'){
@@ -240,9 +295,24 @@ export default {
         this.$router.push('/message').catch(e=>{})
       }if(value=='shop'){
         // 跳转到购物车
+<<<<<<< HEAD
         this.$router.push('/shop').catch(e=>{})
       }
     }
   }
 }
+=======
+        this.$router.push('/shopcart').catch(e=>{})
+       }
+      }
+    }
+  }
+
+<<<<<<< HEAD
+=======
+
+
+   
+>>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
+>>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
 </script>
