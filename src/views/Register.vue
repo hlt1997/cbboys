@@ -157,7 +157,7 @@
             // 用户注册成功，跳转到登录页面
             if(res.data.code==1){
               // this.$toast({message:'注册成功'})
-              this.$router.push('/')
+              this.$router.push('/login')
             }else{
               // this.$toast({message:'用户名已存在'})
               this.$messagebox('注册提示','用户名已被占用')

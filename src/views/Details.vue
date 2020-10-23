@@ -109,7 +109,7 @@
           <td>保障</td>
           <td>
             <!-- 保障栏链接导航 -->
-            <router-link to="/" class="three-router">
+            <router-link to="#" class="three-router">
               假一赔四 · 退货运费险 · 极速退款
               <!-- 末尾尖括号导航 -->
               <img src="../../public/img/details-image/大于号.png" class="three-image">
@@ -120,7 +120,7 @@
           <td>权益</td>
           <td>
             <!-- 芝麻分导航栏 -->
-            <router-link to="/" class="three-router">
+            <router-link to="#" class="three-router">
               凭芝麻分先用后付，收货满意再付   
               <span class="three-position">开通</span> 
               <!-- 末尾尖括号导航 -->
@@ -132,7 +132,7 @@
           <td>参数</td>
           <td>
             <!-- 参数导航栏链接 -->
-            <router-link to="/" class="three-router">
+            <router-link to="#" class="three-router">
               品牌 产地 . . .
               <!-- 末尾尖括号导航 -->
               <img src="../../public/img/details-image/大于号.png" class="three-image">
@@ -150,7 +150,7 @@
           <!-- 第一层标签（宝贝介绍） -->
           <div>
             <span class="four-baby">宝贝评价(234)</span>
-            <router-link to="/" class="four-all">查看全部 > </router-link>
+            <router-link to="#" class="four-all">查看全部 > </router-link>
           </div>
           <!-- 各种各样的评价，以及汇总 -->
           <div>
@@ -179,7 +179,7 @@
           <!-- 询问买过的人，以及店家详细信息 -->
           <div>
             <span class="four-baby">问大家(1234)</span>
-            <router-link to="/" class="four-all">查看全部 ></router-link>
+            <router-link to="#" class="four-all">查看全部 ></router-link>
           </div>
           <!-- 问题提问区 -->
           <div class="four-last-fu">
@@ -252,7 +252,7 @@
           <li>
             <ul>
               <!-- 店铺连接   -->
-              <router-link to="/">
+              <router-link to="#">
               <!-- 店铺下的图片以及文字的内容 -->
                 <li><img src="../../public/img/details-image/店铺.png" class="last-img"></li>
                 <li>店铺</li>
@@ -262,7 +262,7 @@
           <li>
             <ul>
               <!-- 客服导航栏的内容 -->
-              <router-link to="/">             
+              <router-link to="/message">             
                 <li><img src="../../public/img/details-image/客服.png" class="last-img"></li>
                 <li>客服</li>
               </router-link>
@@ -285,10 +285,10 @@
           </li>
           <li class="last-li-button">
             <!-- 加入购物车的内容以及立即购买的内容 -->
-            <router-link to="/">
+            <router-link to="/shop">
               <button class="last-button">加入购物车</button>   
             </router-link>  
-            <router-link to="/shopcart">
+            <router-link :to="`${info.href}`">
               <button class="last-button">立即购买</button>
             </router-link>          
           </li>
@@ -308,12 +308,12 @@
     /* 顶部导航栏图片 */
     .details .sideshow{
       width: 100%;
-      height: 350px;
+      height: 200px;
     }
     /* 顶部轮播图样式 */
     .details .swipe{
-      height: 350px;
-      margin: 0 10px;
+      height: 200px;
+      margin: 40px 10px 0 10px;
     }
     /*第二栏 价格，详情介绍 总布局*/
     .details .money{
@@ -496,7 +496,7 @@
     .details .good-baby{
      
       background: #fff;
-      padding: 10px 0;
+      padding: 10px 10px 10px 0;
     }
     /* 详情页图片样式 */
     .details .products{
@@ -535,12 +535,13 @@
     .details .products-table{
       background: #FFF;
       padding: 5px;
-      margin-bottom:100px ;
+      margin-bottom:50px ;
     }
     /* 底部固定导航栏 */
     .details .last-ul{
       display: flex;
-      /* justify-content: space-around; */
+      justify-content: space-around;
+      padding:5px 0;
     }
     /* 底部导航栏图片的样式 */
     .details .last-img{
@@ -596,10 +597,6 @@
       border-bottom-right-radius:15px;
       background:linear-gradient(to right ,#f30 , #f00 );
       padding:5px 17px;
-    }
-    .details .last-down ul{
-      list-style: none;
-      padding-left:0 ;
     }
 </style>
 

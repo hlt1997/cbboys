@@ -36,7 +36,7 @@
           <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
           <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
         </mt-tab-item>
-        <mt-tab-item id="shopcart">
+        <mt-tab-item id="shop">
           购物车
           <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shopcart'">
           <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
@@ -197,9 +197,9 @@ export default {
       }if(value=='message'){
         // 跳转到消息页面
         this.$router.push('/message').catch(e=>{})
-      }if(value=='shopcart'){
+      }if(value=='shop'){
         // 跳转到购物车
-        this.$router.push('/shopcart').catch(e=>{})
+        this.$router.push('/shop').catch(e=>{})
       }
     }
   },

@@ -1,7 +1,7 @@
 <template>
   <div class='site'>
     <mt-header>
-      <router-link to="/shopcart" slot='left'>
+      <router-link to="/" slot='left'>
         <mt-button icon='back'></mt-button>
       </router-link>
       <div slot="right">

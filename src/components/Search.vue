@@ -22,10 +22,10 @@
   z-index: 1;
 }
 .search::after{
-  content: "";
+  content: ""; 
   display: block;
-  /* height: 100px; */
-  clear: both;
+  height: 100px;
+   clear: both;
 }
 /* 顶部搜索框下的图片*/
   .search img{
