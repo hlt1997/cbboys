@@ -37,7 +37,6 @@
           <span>{{list.details}}</span><br>
           <span>￥</span>
           <span>{{list.price}}</span>
-          
         </p>
       </div>
     </div>
@@ -46,66 +45,7 @@
     <div class="hint">
       <p>一滴都没有了~~</p>
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
-
-
-    <my-footer></my-footer>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
->>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
-    <!--底部导航开始-->
-    <div class="nav">
-      <mt-tabbar v-model='tabbar' fixed>
-        <mt-tab-item id="index">
-          首页
-          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="shop">
-          购物车
-          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shop'">
-          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="message">
-          信息
-          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="me">
-          我的
-          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
-    <!--底部导航结束-->
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
->>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
+   <my-footer></my-footer>
   </div>
 </template>
 
@@ -217,14 +157,14 @@
 <script>
 // 引入顶部搜索框组件
 import Search from "../components/Search";
+import MyFooter from "../components/MyFooter";
 
 export default {
   components:{
-    Search
+    Search,MyFooter
   },
   data(){
     return{
-      tabbar:'index',
       // 倒计时变量
       timer:'',
       // 用于存储轮播图信息
@@ -234,34 +174,7 @@ export default {
      
     }
   },
-<<<<<<< HEAD
-
-
   mounted(){
-=======
-  mounted(){
-<<<<<<< HEAD
-
-=======
-=======
-<<<<<<< HEAD
-
-  mounted(){
-=======
-
-
-
-
-
-
-
-
-  mounted(){
-
->>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
->>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
     setInterval(()=>{
       // 获取当前时间毫秒数
       let now = new Date().getTime();
@@ -284,7 +197,6 @@ export default {
       let second = mil % 60;
       this.timer = `${day}天${hour}时${min}分钟${second}秒`;
     },1000);
-<<<<<<< HEAD
 
        this.axios.get('/carousel').then(res=>{
          console.log(res.data.results)
@@ -295,67 +207,7 @@ export default {
          this.lists = res.data.results
        })
   },
-   watch:{
-=======
-    this.axios.get('/carousel').then(res=>{
-         console.log(res.data.results)
-         this.carousels = res.data.results
-       });
-       this.axios.get('/list').then(res=>{
-         console.log(res.data.results);
-         this.lists = res.data.results
-       })
-  },
- // 监听导航栏底部的变化
-  watch:{
-<<<<<<< HEAD
-=======
-=======
  
-   watch:{
->>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
->>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
-    tabbar(value){
-      // 跳转到主页
-      if(value=='index'){
-        this.$router.push('/').catch(e=>{})
-      }if(value=='me'){
-      // 跳转到我的页面
-        this.$router.push('/me').catch(e=>{})
-      }if(value=='message'){
-        // 跳转到消息页面
-        this.$router.push('/message').catch(e=>{})
-      }if(value=='shop'){
-        // 跳转到购物车
-        this.$router.push('/shop').catch(e=>{})
-      }
-    }
-<<<<<<< HEAD
-=======
-  }
+ // 监听导航栏底部的变化
 }
-<<<<<<< HEAD
-
-=======
-=======
-        this.$router.push('/shopcart').catch(e=>{})
-       }
-      }
-    }
-  }
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
-
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
-=======
-   
->>>>>>> 0b5193df5b74340380cb1bbaba909529444687ab
->>>>>>> 9e7a6e670fc8e7bfdf406ceee9db3c56e3f9cf74
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
 </script>

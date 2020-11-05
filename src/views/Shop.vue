@@ -9,7 +9,7 @@
     </div>
     <ul class="product" @click="handle">
       <li v-for="(item,index) of shops" :key="index" >
-        <input type="checkbox" v-model="item.is_checked">
+        <input type="checkbox" v-model="item.is_checked" @click="check(item)">
         <!-- <span>{{item.is_checked}}</span> -->
         <img :src="item.pic" alt="">
         <div class="pro_details">
@@ -21,52 +21,25 @@
         <span>{{item.count}}</span>
         <button :data-i="index" :data-n="+1">+</button>
       </li>
-     
-      
     </ul>
-     <div class="all">
+      <div class="all">
         <span><input type="checkbox" v-model="is_check" @click="cheAll">全选</span>
         <span>总价：￥{{total.toFixed(2)}}</span> 
       </div>
-    <div>
-      
-    </div>
-    <!--底部导航开始-->
-    <div class="nav">
-      <mt-tabbar v-model='tabbar' fixed>
-        <mt-tab-item id="index">
-          首页
-          <img src="../../public/img/bottom-img/index_enabled.png" slot="icon" v-if="tabbar=='index'">
-          <img src="../../public/img/bottom-img/index_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="shop">
-          购物车
-          <img src="../../public/img/bottom-img/cart_enabled.png" slot="icon" v-if="tabbar=='shop'">
-          <img src="../../public/img/bottom-img/cart_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="message">
-          信息
-          <img src="../../public/img/bottom-img/xiaoxi_enabled.png" slot="icon" v-if="tabbar=='message'">
-          <img src="../../public/img/bottom-img/xiaoxi_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-        <mt-tab-item id="me">
-          我的
-          <img src="../../public/img/bottom-img/me_enabled.png" slot="icon" v-if="tabbar=='me'">
-          <img src="../../public/img/bottom-img/me_disabled.png" slot="icon" v-else>
-        </mt-tab-item>
-      </mt-tabbar>
-    </div>
-    <!--底部导航结束-->
+      <my-footer></my-footer>
   </div>  
 </template>
 <style scoped>
+
+  .cart button{
+    background: #fff;
+    border: 1px solid #e8e8e8;
+  }
   /*设置底部选项卡选中时的颜色 */
   a.is-selected{
     color: #d4237a !important;
   }
-  .cart{
-    /* background-color: #eeeeee; */
-  }
+  /*顶部导航栏容器 */
   .nav{
     padding: 10px;
   }
@@ -78,8 +51,10 @@
     font-size: 24px;
     font-weight: bold;
   }
+  /*商品列表容器*/
   .product{
     margin-bottom: 55px;
+    
   }
   .product li{
     background-color: #fff;
@@ -96,6 +71,7 @@
     width: 80px;
     margin-left: 10px;
   }
+  /*价格及信息容器*/
   .pro_details{
     margin:0 10px
   }
@@ -115,6 +91,7 @@
     padding-right: 5px;
     border: 1px solid #666;
   }
+  /*底部总价容器*/
   .all{
     display: flex;
     justify-content: space-between;
@@ -131,45 +108,77 @@
   }
 </style>
 <script>
+import Search from "../components/Search";
+import MyFooter from "../components/MyFooter";
+
+  
 export default {
+  components:{
+    Search,MyFooter
+  },
   data(){
     return{
-      tabbar:'shop',
+      // 用于存储商品信息
       shops:[],
+      // 用于存储商品是否选中
       is_check:false
     }
   },
-  methods:{
-    handle(e){
-      if(e.target.nodeName == "BUTTON" && e.target.innerHTML == '×'){
-        // console.log(e)
-        let i = e.target.dataset.i;
-        // console.log(i)
-        this.shops.splice(i,1)
-      }
-      else{
-        let i = e.target.dataset.i;
-        this.shops[i].count+=parseInt(e.target.dataset.n) ;
-        if(this.shops[i].count<1){
-          this.shops[i].count = 1;
-        }
-      }
-    },
-    cheAll(){
-      if(this.is_check==false){
-        for(let key of this.shops){
-          key.is_checked = true
-          console.log(key.is_checked)
-        }
-      }
-    }
-  },
   mounted(){
+    console.log(this.tabbar)
     this.axios.get('/cart').then(res=>{
       this.shops = res.data.results
       // console.log(this.shops[0].is_checked)
     })
   },
+  methods:{
+    // 商品处理事件，包括是否选中，加减商品，删除商品
+    handle(e){
+      // 当点击的标签是<button>且内容是×就删除当前点击的商品
+      if(e.target.nodeName == "BUTTON" && e.target.innerHTML == '×'){
+        let i = e.target.dataset.i;
+        this.shops.splice(i,1)
+      }
+      // 否则点击的标签是<button>时
+      else if(e.target.nodeName == "BUTTON"){
+        // 得到用自定义属性保存的下标index
+        let i = e.target.dataset.i;
+        // 当前点击的数量加或减
+        this.shops[i].count+=parseInt(e.target.dataset.n) ;
+        // 当点击减到1时，始终为1
+        if(this.shops[i].count<1){
+          this.shops[i].count = 1;
+        }
+        // 如果点击的是input时,当点击取消选中一个时就取消全选
+      }else if(e.target.nodeName == "INPUT"){
+        }
+    },
+    check(){
+      let select = this.shops.every(item=>{
+        // console.log(item.is_checked)
+        // console.log(item.is_checked)
+          return item.is_checked == true;
+          
+        })
+        console.log(select.length)
+        // select.length == this.shops.length ? this.is_check = true : this.is_check = false
+        this.is_check = select
+    },
+    // 当点击全选时，商品全部选中
+    cheAll(){
+      // 如果点击当前的按钮为false，点击后则为true，就让所有按钮变为true，即可全部选中
+      if(this.is_check==false){
+        for(let key of this.shops){
+          key.is_checked = true
+        }
+      }else{
+        for(let key of this.shops){
+          key.is_checked = false
+        }
+      }
+    }
+  },
+  
   computed:{
     total(){
       let total = 0;
@@ -189,22 +198,5 @@ export default {
       return counts;
     }
   },
-  watch:{
-    tabbar(value){
-      // 跳转到主页
-      if(value=='index'){
-        this.$router.push('/').catch(e=>{})
-      }if(value=='me'){
-      // 跳转到我的页面
-        this.$router.push('/me').catch(e=>{})
-      }if(value=='message'){
-        // 跳转到消息页面
-        this.$router.push('/message').catch(e=>{})
-      }if(value=='shop'){
-        // 跳转到购物车
-        this.$router.push('/shop').catch(e=>{})
-      }
-    }
-  }
 }
 </script>

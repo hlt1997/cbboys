@@ -16,7 +16,7 @@
             <img src="../../public/img/details-image/链接.png" alt="" class="img-header">
           </router-link>
           <!-- 购物车链接 -->
-          <router-link to="/shopcart">
+          <router-link to="/shop">
             <img src="../../public/img/details-image/购物车.png" class="img-header">
           </router-link>
           <!-- 更多链接 -->
@@ -625,21 +625,8 @@ export default {
     }
   },
   mounted(){
-    // this.$router,路由
-    // this.$router,路由请求信息
-    // 1.获取地址栏中的ID
-<<<<<<< HEAD
-    // let id = this.$router.params.id;
-    console.log(this.$router.param.herf)
-    // 2.向服务器发送请求
-     this.axios.get('/details?id=' + id).then(res=>{
-       let data = res.data.result;
-       console.log(data);
-        data.
-        this.info = data;
-     })
-  }
-=======
+
+
     let id = this.$route.params.id;
     console.log(id);
      //2.向服务器发送请求
@@ -655,6 +642,6 @@ export default {
       this.info = data;
      })
    }
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
+
 }
 </script>

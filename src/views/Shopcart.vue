@@ -19,28 +19,18 @@
         <span>177****2078</span>
       </router-link>
     </div>
-    <div>
-      <ul class='color'>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
+    
     <div class="background">
       <table></table>
       <div class="two">
         <img src="../../public/img/bottom-img/share.png" alt="">
         <span>这里需要数据</span>
         <div class='two-text'>
-<<<<<<< HEAD
+
           <img src="../../public/img/detail/detail_img1.jpg" alt="">
-=======
-          <img :src="info[0].imagea" alt="">
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
+
+          <span></span>
+
           <div>
             <div>{{info[0].title}}</div>
             <span>颜色 需要数据</span>
@@ -97,11 +87,11 @@
           </p>
         </div>
         <div>
-<<<<<<< HEAD
+
           <span>积分</span>
-=======
+
           <span>積分</span>
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
+
           <p>{{info[0].subtitle}}</p>
         </div>
         <div>
@@ -145,26 +135,7 @@
   </div>
 </template>
 <style scoped>
-<<<<<<< HEAD
- #shopcart .underline{
-
-=======
-<<<<<<< HEAD
- 
-=======
-<<<<<<< HEAD
-  html{
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-  }
->>>>>>> 2e10df724a6ffcadd40993463d8d85c96be457ce
   #shopcart .underline{
-=======
- 
-  #shopcart .underline{
->>>>>>> 4bc2f1612b796ad833af007cf529689362f73f5e
-
     text-decoration: none;
     color:#000
   }
@@ -203,7 +174,7 @@
   }
   /* two第二块样式 */
   .two{
-    height:210px;
+    height:230px;
     border-radius:15px;
     margin-top:10px;
     background-color:white;
@@ -222,9 +193,9 @@
   }
   .two :nth-child(3)>div{
     display: block;
-    width:298px;
+    width:250px;
     height:60px;
-    margin:-60px 0 0 65px
+    margin:-60px 0 10px 35px
   }
   .two-text{
     margin:60px 0 0 0 
@@ -243,7 +214,7 @@
     margin-left:240px;
     margin-top:-10px
   }
-  .amount p :nth-child(1){
+ mount p :nth-child(1){
     margin-right:0
   }
   .amount p :nth-child(2){
