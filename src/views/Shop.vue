@@ -15,7 +15,7 @@
         <div class="pro_details">
           <p>{{item.title}} <button :data-i="index">×</button></p>
           <p>{{item.details}}</p>
-          <p>{{item.price}}</p>
+          <p>¥{{item.price.toFixed(2)}}</p>
         </div>
         <button :data-i="index" :data-n="-1">-</button>
         <span>{{item.count}}</span>
@@ -25,6 +25,7 @@
       <div class="all">
         <span><input type="checkbox" v-model="is_check" @click="cheAll">全选</span>
         <span>总价：￥{{total.toFixed(2)}}</span> 
+        <span>结算</span>
       </div>
       <my-footer></my-footer>
   </div>  
@@ -53,7 +54,7 @@
   }
   /*商品列表容器*/
   .product{
-    margin-bottom: 55px;
+    margin-bottom: 90px;
     
   }
   .product li{
@@ -77,12 +78,20 @@
   }
   .pro_details>p:first-child{
     font-size: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-weight: bold;
   }
-  .pro_details>p:last-child{
-    font-size: 14px;
+  .pro_details>p:nth-child(2){
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin-bottom: 10px;
+  }
+  .pro_details>p:last-child{
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: red;
   }
   .product button{
     outline: none;
@@ -105,6 +114,16 @@
     padding-left: 10px;
     padding-right: 10px;
     height: 50px;
+  }
+  .all>span:last-child{
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    background: orange;
+    color: #fff;
+    border-radius: 10px;
+    line-height: 30px;
   }
 </style>
 <script>

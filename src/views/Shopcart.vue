@@ -90,7 +90,7 @@
 
           <span>积分</span>
 
-          <span>積分</span>
+          
 
           <p>{{info[0].subtitle}}</p>
         </div>
@@ -244,7 +244,8 @@
     color:black
   }
   .delivery>.chan-mar{
-    margin-left:175px;
+    margin-left:125px;
+    width: 200px;
   }
   /* 取消多行文本域的拉伸效果 */
   textarea{
@@ -254,7 +255,7 @@
   }
   /* 修改“留言”处下移 */
   .delivery-mar{
-    margin-top:15px
+    margin-top:5px
   }
   /* three第三块样式 */
   .three{
@@ -342,7 +343,8 @@
     background-color: #f00;
     color:#fff;
     outline:none;
-    top:3px
+    top:3px;
+    
   }
   .color{
     color:#fff;
@@ -350,6 +352,9 @@
   .button :nth-child(1){
     margin-left:5%;
     
+  }
+  .chan-mar{
+    margin:5px 0 0 120px
   }
 </style>
 <script>

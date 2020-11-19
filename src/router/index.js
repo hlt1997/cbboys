@@ -3,47 +3,18 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Me from '../views/Me'
 import Shopcart from '../views/Shopcart'
-import Message from '../views/Message'
 import Register from '../views/Register'
 import Login from '../views/Login'
 
 import Site from '../views/Site'
-import Details from '../views/Details'
 import NewSite from '../views/NewSite'
-import Shop from '../views/Shop'
 
 
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
 
-    path: '/shop',
-    component: Shop
-  },
-  {
-
-    path: '/newsite',
-    component: NewSite
-  },
-  {
-    path: '/site',
-    component: Site
-  },
-  {
-    path:'/details/:id',
-    component:Details
-  },
-  {
-    path: '/shopcart/:id',
-
-    component: Shopcart
-  },
-  {
-    path: '/message',
-    component: Message
-  },
   {
     path: '/me',
     component: Me
@@ -70,6 +41,55 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "shop" */ '../views/Shop.vue')
+  },
+  {
+    path: '/message',
+    name: 'Message',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "message" */ '../views/Message.vue')
+  },
+  {
+    path: '/details/:id',
+    name: 'Details',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "details" */ '../views/Details.vue')
+  },
+  {
+    path: '/newsite',
+    name: 'NewSite',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "newsite" */ '../views/NewSite.vue')
+  },
+  {
+    path: '/shopcart/:id',
+    name: 'Shopcart',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "shopcart" */ '../views/Shopcart.vue')
+  }
+  ,
+  {
+    path: '/site',
+    name: 'Site',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "site" */ '../views/Site.vue')
   }
 ]
 

@@ -128,6 +128,9 @@
     border-radius: 50%;
     margin-right: 10px;
   }
+  .chat_msg {
+    width: 80%;
+  }
 /*每个聊天信息列表容器下的品牌 */
   .chat_msg>p:first-child{
     font-size: 18px;
@@ -139,6 +142,9 @@
     margin-top: 8px;
     font-size: 14px;
     color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
     /*设置底部选项卡选中时的颜色 */
   a.is-selected{

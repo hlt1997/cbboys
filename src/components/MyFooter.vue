@@ -32,7 +32,10 @@
 /* .mint-tabbar>.mint-tab-item.is-selected{
   background-color: #fff;
 } */
-
+/*设置底部选项卡选中时的颜色 */
+  a.is-selected{
+    color: #d4237a !important;
+  }
 </style>
 <script>
 export default {
@@ -72,7 +75,11 @@ export default {
         this.$router.push('/message').catch(e=>{})
       }if(value=='shop'){
         // 跳转到购物车
+        if(this.$store.state.isLogined == 0){
+          this.$router.push('/login')
+        }else{
         this.$router.push('/shop').catch(e=>{})
+        }
       }
     }
   } ,
